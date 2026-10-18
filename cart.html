@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vault Escrow Cart • CardVault High-Grade Sports Slabs</title>
+  
+  <meta name="description" content="Review your sports trading card cart, select in-vault custody or insured armored courier delivery, and settle securely via CardVault wire escrow.">
+  
+  <!-- Immediate Theme & RTL Check -->
+  <script>
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    if (localStorage.getItem('site-dir') === 'rtl') {
+      document.documentElement.setAttribute('dir', 'rtl');
+    }
+  </script>
+
+  <!-- CardVault Logo Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cherry: {
+              50: '#fff1f2',
+              100: '#ffe4e6',
+              200: '#fecdd3',
+              500: '#CC313D',
+              600: '#b0222e',
+              700: '#8f1721',
+            },
+            bubblegum: {
+              DEFAULT: '#F7C5CC',
+              dark: '#e09aa4',
+            },
+            vault: {
+              DEFAULT: '#0b0f19',
+              deep: '#060911',
+              card: '#111827',
+              light: '#1f2937',
+              border: '#2e384d'
+            }
+          },
+          fontFamily: {
+            heading: ['"Noto Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-vault-deep dark:text-gray-100 transition-colors duration-300 antialiased selection:bg-cherry-500 selection:text-white">
+
+  <!-- ================= SECTION 1: FIXED HEADER NAVIGATION ================= -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-vault/95 backdrop-blur-md border-b border-gray-200 dark:border-vault-border transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+            </svg>
+          </div>
+          <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 rtl:space-x-reverse mx-2 xl:mx-4">
+          <div class="relative group nav-dropdown">
+            <button class="dropdown-toggle flex items-center space-x-1.5 rtl:space-x-reverse text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 py-2 transition-colors">
+              <span>Home</span>
+              <svg class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="dropdown-menu absolute left-0 rtl:right-0 mt-1 w-64 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border shadow-2xl hidden group-hover:block z-50 p-2">
+              <a href="index.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-200 font-semibold text-sm transition">
+                <span class="w-8 h-8 rounded-lg bg-gray-200 dark:bg-vault flex items-center justify-center text-gray-500 font-bold text-xs shrink-0">⚡</span>
+                <span class="font-bold text-gray-900 dark:text-white">Sports Card Marketplace</span>
+              </a>
+              <a href="home2.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-200 font-semibold text-sm transition">
+                <span class="w-8 h-8 rounded-lg bg-gray-200 dark:bg-vault flex items-center justify-center text-gray-500 font-bold text-xs shrink-0">🏛️</span>
+                <span class="font-bold text-gray-900 dark:text-white">Vault Custody &amp; Consignment</span>
+              </a>
+            </div>
+          </div>
+          <a href="about.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 dark:hover:text-bubblegum transition">About Us</a>
+          <a href="category.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 dark:hover:text-bubblegum transition">Categories</a>
+          <a href="grading.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 dark:hover:text-bubblegum transition">Grading</a>
+          <a href="blog.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 dark:hover:text-bubblegum transition">Blog</a>
+          <a href="contact.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 dark:hover:text-bubblegum transition">Contact</a>
+        </nav>
+
+        <!-- Utility Toggles & Action Buttons (Matches Image 5) -->
+        <div class="hidden lg:flex items-center space-x-2 xl:space-x-3 rtl:space-x-reverse shrink-0">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border hover:bg-gray-100 dark:hover:bg-vault-light text-gray-600 dark:text-gray-300 transition" title="Toggle Theme" aria-label="Toggle Dark/Light Mode">
+            <svg class="theme-toggle-sun w-5 h-5 hidden text-bubblegum" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+            </svg>
+            <svg class="theme-toggle-moon w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle px-3 py-1.5 rounded-xl border border-gray-200 dark:border-vault-border text-xs font-black hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-300 transition flex items-center gap-1" title="Toggle Text Direction" aria-label="Toggle RTL/LTR">
+            <span class="rtl-text">← RTL</span>
+          </button>
+
+          <!-- Wishlist Button (Matches Image 5) -->
+          <a href="wishlist.html" class="relative p-2.5 rounded-2xl bg-gray-100 dark:bg-vault-card hover:bg-gray-200 dark:hover:bg-vault-light border border-gray-200/80 dark:border-vault-border text-gray-800 dark:text-gray-200 transition flex items-center justify-center group" title="My Vault Wishlist" aria-label="Wishlist">
+            <svg class="w-5 h-5 text-gray-800 dark:text-gray-200 group-hover:text-cherry-500 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+            <span class="header-wishlist-count absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-cherry-500 text-white text-[10px] font-black flex items-center justify-center shadow-md">0</span>
+          </a>
+
+          <!-- Cart Button (Matches Image 5) -->
+          <a href="cart.html" class="relative p-2.5 rounded-2xl bg-cherry-500 hover:bg-cherry-600 text-white transition flex items-center justify-center shadow-md shadow-cherry-500/25 group ring-2 ring-cherry-400/30" title="Vault Escrow Cart" aria-label="Cart">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+            <span class="header-cart-count absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-white dark:bg-vault-card text-cherry-600 border border-gray-200 dark:border-vault-border text-[10px] font-black flex items-center justify-center shadow-md">0</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center gap-2 shrink-0">
+          <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300 focus:outline-none rounded-lg hover:bg-gray-100 dark:hover:bg-vault-light transition" aria-label="Open Mobile Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path class="line-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+              <path class="line-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+              <path class="line-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 lg:hidden">
+    <div class="mobile-menu-backdrop fixed inset-0 bg-black/70 backdrop-blur-sm"></div>
+    <div class="fixed inset-y-0 right-0 rtl:left-0 rtl:right-auto w-[82vw] max-w-[320px] sm:w-88 bg-white dark:bg-vault p-5 sm:p-6 shadow-2xl flex flex-col justify-between overflow-y-auto border-l rtl:border-r rtl:border-l-0 border-gray-200 dark:border-vault-border">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-gray-200 dark:border-vault-border">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0">
+            <span class="text-xl font-black text-gray-900 dark:text-white font-heading">Card<span class="text-cherry-500">Vault</span></span>
+          </a>
+          <button id="mobile-menu-close" class="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <nav class="mt-6 space-y-3 font-heading text-sm font-bold">
+          <div class="space-y-1">
+            <button class="w-full flex justify-between items-center py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span>Home</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="pl-4 ml-1 space-y-2 hidden border-l-2 border-gray-200 dark:border-vault-border py-1 text-sm">
+              <a href="index.html" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500 font-semibold">Sports Card Marketplace</a>
+              <a href="home2.html" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500 font-semibold">Vault Custody &amp; Consignment</a>
+            </div>
+          </div>
+          <a href="about.html" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-cherry-500">About Us</a>
+
+          <div class="space-y-1">
+            <button class="w-full flex justify-between items-center py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span>Categories</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="pl-4 ml-1 space-y-2 hidden border-l-2 border-gray-200 dark:border-vault-border py-1 text-sm">
+              <a href="category.html?type=baseball" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Baseball ⚾</a>
+              <a href="category.html?type=basketball" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Basketball 🏀</a>
+              <a href="category.html?type=cricket" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Cricket 🏏</a>
+              <a href="category.html?type=football" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Football 🏈</a>
+            </div>
+          </div>
+
+          <a href="grading.html" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-cherry-500">Grading</a>
+          <a href="blog.html" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-cherry-500">Blog</a>
+          <a href="contact.html" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-cherry-500">Contact</a>
+          <div class="pt-3 border-t border-gray-150 dark:border-vault-border space-y-2">
+            <a href="wishlist.html" class="flex items-center justify-between py-2 text-cherry-500">
+              <span>My Wishlist</span>
+              <span class="header-wishlist-count px-2 py-0.5 rounded-full bg-cherry-500 text-white text-xs">0</span>
+            </a>
+            <a href="cart.html" class="flex items-center justify-between py-2 text-cherry-500">
+              <span>Cart</span>
+              <span class="header-cart-count px-2 py-0.5 rounded-full bg-cherry-500 text-white text-xs">0</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-vault-border">
+        <button class="theme-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border hover:bg-gray-100 dark:hover:bg-vault-light text-gray-600 dark:text-gray-300 transition" title="Toggle Theme" aria-label="Toggle Dark/Light Mode">
+          <svg class="theme-toggle-sun w-5 h-5 hidden text-bubblegum" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+          </svg>
+          <svg class="theme-toggle-moon w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+        <button class="rtl-toggle p-2.5 rounded-xl border border-gray-200 dark:border-vault-border text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-vault-light transition text-xs font-bold">
+          <span class="rtl-text">← RTL</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= BREADCRUMBS ================= -->
+  <section class="py-3 bg-white dark:bg-vault border-b border-gray-200 dark:border-vault-border text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div class="flex items-center space-x-2 rtl:space-x-reverse text-gray-500 dark:text-gray-400">
+        <a href="index.html" class="hover:text-cherry-500 transition">Home</a>
+        <span>/</span>
+        <span class="text-cherry-500 dark:text-bubblegum font-bold">Vault Escrow Cart</span>
+      </div>
+      <span class="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+        Fedwire Real-Time Escrow Protected
+      </span>
+    </div>
+  </section>
+
+  <!-- ================= CART HERO ================= -->
+  <section class="py-10 bg-white dark:bg-vault border-b border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-cherry-500/10 text-cherry-600 dark:text-bubblegum border border-cherry-500/20 mb-3">
+            <span>🛒 Fiduciary Escrow Checkout</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white font-heading">
+            Vault Cart & Allocation Settlement
+          </h1>
+          <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2 max-w-xl">
+            Choose between immediate insured FedEx Priority transit or seamless 0% sales tax title deposit directly into our Beverly Hills Class 3 bunker facility.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+          <span class="px-3 py-1.5 rounded-xl bg-gray-100 dark:bg-vault-card border border-gray-200 dark:border-vault-border font-bold">
+            🔒 256-Bit SSL Encrypted
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CART MAIN CONTENT ================= -->
+  <main class="py-12 bg-gray-50 dark:bg-vault-deep min-h-[500px]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Container populated by JS -->
+      <div id="cart-container">
+        <!-- JS renders cart here -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= MASTER FOOTER ================= -->
+  <footer class="bg-gray-100 dark:bg-vault-deep text-gray-600 dark:text-gray-400 py-16 border-t border-gray-200 dark:border-vault-border text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <!-- Col 1: Brand & Overview -->
+        <div class="space-y-4">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+              </svg>
+            </div>
+            <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+          </a>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            The world's premier sports trading card marketplace and institutional vault facility. Powered by forensic authentication, certified grading, and real-time market comps.
+          </p>
+        </div>
+
+        <!-- Col 2: Sport Categories -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Sport Categories</h4>
+          <ul class="space-y-2.5">
+            <li><a href="category.html?type=baseball" class="hover:text-cherry-500 transition">Baseball (Topps Chrome)</a></li>
+            <li><a href="category.html?type=basketball" class="hover:text-cherry-500 transition">Basketball (Prizm &amp; Chrome)</a></li>
+            <li><a href="category.html?type=cricket" class="hover:text-cherry-500 transition">Cricket (Topps Attax &amp; Chrome)</a></li>
+            <li><a href="category.html?type=football" class="hover:text-cherry-500 transition">Football (Composite &amp; RPA)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Depository -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Services & Vault</h4>
+          <ul class="space-y-2.5">
+            <li><a href="grading.html" class="hover:text-cherry-500 transition">PSA Submission Pipeline</a></li>
+            <li><a href="home2.html" class="hover:text-cherry-500 transition">Class 3 Depository Storage</a></li>
+            <li><a href="about.html" class="hover:text-cherry-500 transition">Forensic Authentication Lab</a></li>
+            <li><a href="coming-soon.html" class="hover:text-cherry-500 transition">Next Drop Launchpad</a></li>
+            <li><a href="contact.html" class="hover:text-cherry-500 transition">Private Consignment Intake</a></li>
+            <li><a href="404.html" class="hover:text-cherry-500 transition">404 Error Diagnostics</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Collector Concierge -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Collector Concierge</h4>
+          <p class="text-xs text-gray-500 mb-2">9400 Wilshire Blvd, Suite 800<br>Beverly Hills, CA 90212</p>
+          <p class="text-xs font-mono text-cherry-500 font-bold mb-1"><a href="mailto:concierge@cardvault.com" class="hover:underline">concierge@cardvault.com</a></p>
+          <p class="text-xs text-gray-500"><a href="tel:+18005922273" class="hover:text-cherry-500 transition">+1 (800) 592-CARD</a></p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-gray-200 dark:border-vault-border text-center">
+        <p class="text-center mx-auto">&copy; 2026 CardVault Collectibles Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    let appliedDiscount = 0;
+    let selectedDeliveryMode = 'vault'; // 'vault' or 'courier'
+
+    window.applyPromoCode = function() {
+      const input = document.getElementById('promo-input');
+      if (!input) return;
+      const code = input.value.trim().toUpperCase();
+      if (code === 'VAULT100') {
+        appliedDiscount = 100;
+        showToast('Promo code applied: $100 off!', '🎉');
+      } else if (code === 'GRAIL') {
+        const cart = window.getCart();
+        const subtotal = cart.reduce((sum, item) => sum + (Number(item.price || 0) * (item.qty || 1)), 0);
+        appliedDiscount = Math.round(subtotal * 0.05);
+        showToast(`Promo code applied: 5% off ($${appliedDiscount})!`, '🎉');
+      } else {
+        showToast('Invalid promo code. Try VAULT100 or GRAIL', '⚠️');
+        appliedDiscount = 0;
+      }
+      window.renderCartPage();
+    };
+
+    window.setDeliveryMode = function(mode) {
+      selectedDeliveryMode = mode;
+      window.renderCartPage();
+    };
+
+    window.renderCartPage = function() {
+      const container = document.getElementById('cart-container');
+      if (!container) return;
+
+      const cart = window.getCart();
+
+      if (!cart || cart.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-20 px-4 bg-white dark:bg-vault-card rounded-3xl border border-gray-200 dark:border-vault-border shadow-sm max-w-lg mx-auto">
+            <div class="w-20 h-20 mx-auto rounded-3xl bg-cherry-500/10 text-cherry-600 dark:text-bubblegum flex items-center justify-center text-3xl mb-4">
+              🛒
+            </div>
+            <h3 class="text-xl font-black text-gray-900 dark:text-white font-heading">Your Vault Cart is Empty</h3>
+            <p class="text-xs text-gray-500 mt-2 max-w-sm mx-auto leading-relaxed">
+              Your depository cart has no active slabs reserved. Browse our verified inventory to allocate cards into your account.
+            </p>
+            <div class="mt-6">
+              <a href="category.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-cherry-500 hover:bg-cherry-600 text-white font-black text-xs uppercase tracking-wider transition shadow-lg shadow-cherry-500/25">
+                Explore Available Slabs →
+              </a>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      const subtotal = cart.reduce((sum, item) => sum + (Number(item.price || 0) * (item.qty || 1)), 0);
+      const shippingCost = selectedDeliveryMode === 'courier' ? 45 : 0;
+      const vaultInsurance = 0; // Complimentary
+      const taxRate = selectedDeliveryMode === 'courier' ? 0.0825 : 0; // 0% tax for in-vault depository transfer!
+      const taxAmount = Math.round(subtotal * taxRate);
+      const totalAmount = Math.max(0, subtotal + shippingCost + taxAmount - appliedDiscount);
+
+      container.innerHTML = `
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Column: Items & Delivery Options -->
+          <div class="lg:col-span-8 space-y-6">
+            
+            <!-- Items Card List -->
+            <div class="bg-white dark:bg-vault-card rounded-3xl border border-gray-200 dark:border-vault-border shadow-sm overflow-hidden">
+              <div class="p-5 border-b border-gray-100 dark:border-vault-border flex items-center justify-between">
+                <h3 class="font-extrabold text-base text-gray-900 dark:text-white font-heading">
+                  Reserved Slabs (${cart.length})
+                </h3>
+                <span class="text-xs text-gray-400">Archival Depository Allocation</span>
+              </div>
+
+              <div class="divide-y divide-gray-100 dark:divide-vault-border">
+                ${cart.map(item => `
+                  <div class="p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                      <a href="card-details.html?id=${item.id}" class="w-16 h-20 rounded-xl overflow-hidden bg-vault shrink-0 relative border border-gray-200 dark:border-vault-border">
+                        <img src="${item.image || 'assets/images/virat-kohli-18.jpg'}" alt="${item.name}" class="w-full h-full object-cover">
+                      </a>
+                      <div>
+                        <div class="flex items-center gap-2">
+                          <span class="text-[10px] font-black uppercase text-cherry-500">${item.sport || 'Sports'} ${item.emoji || '🏆'}</span>
+                          <span class="px-2 py-0.5 rounded text-[9px] font-black bg-gray-100 dark:bg-vault text-gray-700 dark:text-gray-300">${item.grade || 'PSA 10'}</span>
+                        </div>
+                        <h4 class="font-bold text-sm text-gray-900 dark:text-white mt-0.5 hover:text-cherry-500 transition">
+                          <a href="card-details.html?id=${item.id}">${item.name}</a>
+                        </h4>
+                        <p class="text-xs text-gray-500">${item.serial || 'Certified Slab'}</p>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-0 border-gray-100 dark:border-vault-border">
+                      <!-- Quantity Toggle -->
+                      <div class="flex items-center border border-gray-200 dark:border-vault-border rounded-xl overflow-hidden">
+                        <button onclick="window.updateCartQty('${item.id}', -1)" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:bg-gray-100 dark:hover:bg-vault transition font-bold text-sm">
+                          -
+                        </button>
+                        <span class="w-8 text-center text-xs font-bold text-gray-900 dark:text-white">
+                          ${item.qty || 1}
+                        </span>
+                        <button onclick="window.updateCartQty('${item.id}', 1)" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:bg-gray-100 dark:hover:bg-vault transition font-bold text-sm">
+                          +
+                        </button>
+                      </div>
+
+                      <div class="text-right">
+                        <div class="font-black text-base text-gray-900 dark:text-white font-heading">
+                          $${(Number(item.price || 0) * (item.qty || 1)).toLocaleString()}
+                        </div>
+                        <button onclick="window.removeFromCart('${item.id}')" class="text-[11px] text-gray-400 hover:text-cherry-500 transition">
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+
+            <!-- Delivery / Custody Mode Selector -->
+            <div class="bg-white dark:bg-vault-card rounded-3xl border border-gray-200 dark:border-vault-border p-6 shadow-sm space-y-4">
+              <h3 class="font-extrabold text-base text-gray-900 dark:text-white font-heading">
+                Choose Settlement & Custody Option
+              </h3>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <!-- Mode 1: In-Vault Custody (Recommended) -->
+                <div onclick="window.setDeliveryMode('vault')" class="p-4 rounded-2xl border-2 cursor-pointer transition flex flex-col justify-between h-full ${selectedDeliveryMode === 'vault' ? 'border-cherry-500 bg-cherry-500/10 dark:bg-cherry-500/15 shadow-md shadow-cherry-500/15 ring-1 ring-cherry-500/40' : 'border-gray-200 dark:border-vault-border bg-gray-50/50 dark:bg-vault/50 hover:border-gray-300 dark:hover:border-vault-light'}">
+                  <div>
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-xs font-black uppercase tracking-wider text-cherry-600 dark:text-cherry-400">🏛️ In-Vault Depository Custody</span>
+                      <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/15 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30">0% Sales Tax</span>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-gray-900 dark:text-white min-h-[1.5rem] flex items-center">Store in Beverly Hills Bunker</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 mt-1.5 leading-relaxed min-h-[3rem]">
+                      Zero shipping transit risk. Instant digital title assignment into your private vault pod with complimentary 90-day climate storage.
+                    </p>
+                  </div>
+                  <div class="mt-auto pt-3 border-t border-gray-150 dark:border-vault-border text-xs font-black text-cherry-600 dark:text-cherry-400">
+                    Free / Included ($0.00)
+                  </div>
+                </div>
+
+                <!-- Mode 2: Insured Courier Delivery -->
+                <div onclick="window.setDeliveryMode('courier')" class="p-4 rounded-2xl border-2 cursor-pointer transition flex flex-col justify-between h-full ${selectedDeliveryMode === 'courier' ? 'border-cherry-500 bg-cherry-500/10 dark:bg-cherry-500/15 shadow-md shadow-cherry-500/15 ring-1 ring-cherry-500/40' : 'border-gray-200 dark:border-vault-border bg-gray-50/50 dark:bg-vault/50 hover:border-gray-300 dark:hover:border-vault-light'}">
+                  <div>
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-xs font-black uppercase tracking-wider ${selectedDeliveryMode === 'courier' ? 'text-cherry-600 dark:text-cherry-400' : 'text-gray-700 dark:text-gray-300'}">✈️ Insured Armored Transit</span>
+                      <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/15 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-500/30">FedEx Priority</span>
+                    </div>
+                    <h4 class="font-extrabold text-sm text-gray-900 dark:text-white min-h-[1.5rem] flex items-center">Direct Physical Delivery</h4>
+                    <p class="text-xs text-gray-600 dark:text-gray-300 mt-1.5 leading-relaxed min-h-[3rem]">
+                      Custom Pelican™ armor frame with cellular GPS beacon and required dual-custody signature handover.
+                    </p>
+                  </div>
+                  <div class="mt-auto pt-3 border-t border-gray-150 dark:border-vault-border text-xs font-black text-gray-900 dark:text-white">
+                    $45.00 Flat Rate (Overnight)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Promo Code Box -->
+            <div class="bg-white dark:bg-vault-card rounded-3xl border border-gray-200 dark:border-vault-border p-5 shadow-sm flex flex-col sm:flex-row gap-3 items-center justify-between">
+              <div>
+                <h4 class="font-bold text-sm text-gray-900 dark:text-white">Collector Voucher or Allocation Pass</h4>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-0.5">Try code <span class="font-mono font-black text-cherry-600 dark:text-cherry-400">VAULT100</span> or <span class="font-mono font-black text-cherry-600 dark:text-cherry-400">GRAIL</span></p>
+              </div>
+              <div class="flex gap-2 w-full sm:w-auto">
+                <input id="promo-input" type="text" placeholder="PROMO CODE" class="flex-1 min-w-0 sm:w-40 px-4 py-2.5 rounded-xl border border-gray-300 dark:border-vault-border bg-gray-50 dark:bg-vault text-xs font-mono font-bold uppercase text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-cherry-500">
+                <button onclick="window.applyPromoCode()" class="shrink-0 px-5 py-2.5 rounded-xl bg-gray-900 dark:bg-white hover:bg-black dark:hover:bg-gray-100 text-white dark:text-gray-900 font-bold text-xs uppercase tracking-wider transition shadow-sm">
+                  Apply
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Order Summary -->
+          <div class="lg:col-span-4 space-y-6">
+            <div class="bg-white dark:bg-vault-card rounded-3xl border border-gray-200 dark:border-vault-border p-6 shadow-xl space-y-5 sticky top-24">
+              <h3 class="font-extrabold text-lg text-gray-900 dark:text-white font-heading pb-3 border-b border-gray-100 dark:border-vault-border">
+                Settlement Summary
+              </h3>
+
+              <div class="space-y-3 text-xs">
+                <div class="flex justify-between text-gray-600 dark:text-gray-400">
+                  <span>Slabs Subtotal</span>
+                  <span class="font-bold text-gray-900 dark:text-white">$${subtotal.toLocaleString()}</span>
+                </div>
+                <div class="flex justify-between text-gray-600 dark:text-gray-400">
+                  <span>Custody / Transit Fee</span>
+                  <span class="font-bold ${shippingCost === 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-900 dark:text-white'}">
+                    ${shippingCost === 0 ? 'Free ($0.00)' : '$' + shippingCost.toFixed(2)}
+                  </span>
+                </div>
+                <div class="flex justify-between text-gray-600 dark:text-gray-400">
+                  <span>Vault Storage & Security</span>
+                  <span class="font-bold text-emerald-600 dark:text-emerald-400">Complimentary</span>
+                </div>
+                <div class="flex justify-between text-gray-600 dark:text-gray-400">
+                  <span>Estimated Sales Tax</span>
+                  <span class="font-bold ${taxAmount === 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-gray-900 dark:text-white'}">
+                    ${taxAmount === 0 ? '$0.00 (In-Vault Exemption)' : '$' + taxAmount.toLocaleString()}
+                  </span>
+                </div>
+                ${appliedDiscount > 0 ? `
+                  <div class="flex justify-between text-emerald-600 dark:text-emerald-400 font-bold">
+                    <span>Voucher Discount</span>
+                    <span>-$${appliedDiscount.toLocaleString()}</span>
+                  </div>
+                ` : ''}
+              </div>
+
+              <div class="pt-4 border-t border-gray-100 dark:border-vault-border flex items-center justify-between">
+                <div>
+                  <span class="block text-[10px] font-bold uppercase tracking-wider text-gray-400">Total Settlement</span>
+                  <span class="text-2xl font-black text-gray-900 dark:text-white font-heading">
+                    $${totalAmount.toLocaleString()}
+                  </span>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-cherry-500/10 text-cherry-600 dark:text-bubblegum">
+                  USD Escrow
+                </span>
+              </div>
+
+              <button onclick="showToast('Initiating Fiduciary Escrow Settlement! Check your email for wiring coordinates.', '🏛️')" class="w-full py-4 rounded-xl bg-cherry-500 hover:bg-cherry-600 text-white font-black text-xs uppercase tracking-wider transition shadow-lg shadow-cherry-500/25 flex items-center justify-center gap-2">
+                <span>Proceed to Escrow Wire Settlement</span>
+                <span>→</span>
+              </button>
+
+              <div class="space-y-2 pt-2 border-t border-gray-100 dark:border-vault-border text-[11px] text-gray-500 dark:text-gray-400">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-500 font-bold">✓</span>
+                  <span>100% Guaranteed Authentic or 2x Refund</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-500 font-bold">✓</span>
+                  <span>Underwritten by Lloyd's of London Specie</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-500 font-bold">✓</span>
+                  <span>Beverly Hills Depository Title Transfer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      `;
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      window.renderCartPage();
+    });
+  </script>
+</body>
+</html>

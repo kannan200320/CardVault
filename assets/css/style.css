@@ -1,0 +1,662 @@
+/* CardVault - Sports Trading Card & Collectibles Shop Custom Stylesheet */
+/* Color Palette: Cherry Red (#CC313D) & Bubblegum Pink (#F7C5CC) with Obsidian Vault (#060911, #0b101d) */
+
+/* Fonts Definition */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Noto Sans', sans-serif !important;
+}
+
+body, p, span, a, input, button, select, textarea, div {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Zero-glitch theme toggle utility: prevents staggered color tearing across pages */
+.disable-transitions,
+.disable-transitions *,
+.disable-transitions *::before,
+.disable-transitions *::after {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+/* Custom Scrollbar - Cherry Red (#CC313D) Accent */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #CC313D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b82430;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #060911;
+}
+
+/* RTL layout mirror */
+[dir="rtl"] .rtl-mirror {
+  transform: scaleX(-1);
+}
+[dir="rtl"] .rtl-flip {
+  transform: rotate(180deg);
+}
+
+/* Holographic Shimmer Effect for Trading Cards */
+.holo-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.holo-shimmer::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(247, 197, 204, 0.25) 45%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(204, 49, 61, 0.3) 55%,
+    transparent 60%,
+    transparent 100%
+  );
+  transform: rotate(-25deg) translateY(-100%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+.holo-shimmer:hover::before {
+  transform: rotate(-25deg) translateY(100%);
+}
+
+/* Refractor Foil Card Hover Effect */
+.refractor-card {
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.refractor-card:hover {
+  transform: translateY(-6px);
+}
+.dark .refractor-card:hover {
+  box-shadow: 0 15px 35px -10px rgba(204, 49, 61, 0.35), 0 0 15px rgba(247, 197, 204, 0.15);
+  border-color: rgba(204, 49, 61, 0.5);
+}
+
+/* Pulse Glow Animation */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(1.04); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 6s infinite ease-in-out;
+}
+
+/* Float Animation */
+@keyframes float-card {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+.animate-float {
+  animation: float-card 5s infinite ease-in-out;
+}
+.animate-float-delayed {
+  animation: float-card 6s infinite ease-in-out 1.5s;
+}
+
+/* Slab Border Gradients - Cherry Red & Bubblegum Pink */
+.slab-gradient-border {
+  background: linear-gradient(135deg, #CC313D 0%, #e56476 50%, #F7C5CC 100%);
+  padding: 1px;
+}
+
+/* Form input contrast rules */
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="search"], input[type="number"], select, textarea {
+  color: #111827;
+  background-color: #ffffff;
+  border-color: #d1d5db;
+}
+.dark input[type="text"], .dark input[type="email"], .dark input[type="password"], .dark input[type="tel"], .dark input[type="search"], .dark input[type="number"], .dark select, .dark textarea {
+  color: #ffffff;
+  background-color: #0f172a;
+  border-color: #374151;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #CC313D !important;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(204, 49, 61, 0.25);
+}
+
+/* Mobile Hamburger Lines Animation */
+#mobile-menu-btn .line-1,
+#mobile-menu-btn .line-2,
+#mobile-menu-btn .line-3 {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: 12px 12px;
+}
+#mobile-menu-btn.open .line-1 {
+  transform: translateY(6px) rotate(45deg);
+}
+#mobile-menu-btn.open .line-2 {
+  opacity: 0;
+}
+#mobile-menu-btn.open .line-3 {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Clean Toast Alert Animations */
+@keyframes toast-in {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.animate-toast-in {
+  animation: toast-in 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Prevent horizontal scroll without breaking sticky header navigation */
+html {
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+  width: 100%;
+  position: relative;
+}
+
+/* Background Viewport Scroll Lock for Mobile Menu Drawer & Modals */
+html.overflow-hidden,
+body.overflow-hidden {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+}
+
+/* Prevent backdrop touch dragging from scrolling background page */
+.mobile-menu-backdrop,
+.modal-backdrop {
+  touch-action: none !important;
+  overscroll-behavior: none !important;
+}
+
+#mobile-menu {
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+/* Allow smooth scrolling inside drawer without leaking scroll to background */
+#mobile-menu > div:nth-child(2),
+#mobile-menu .overflow-y-auto {
+  touch-action: pan-y;
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+#card-quick-modal {
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+#card-quick-modal > div:nth-child(2) {
+  touch-action: pan-y;
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Enforce sticky header navigation across all pages while scrolling */
+header,
+header.sticky {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+}
+
+
+
+img, svg, video, iframe, embed, object {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Touch momentum scrolling for scrollable containers */
+.overflow-x-auto, [class*="overflow-x-auto"] {
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* No scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* Position Sub-Filter Button Contrast & Hover Fix */
+.sub-filter-btn {
+  transition: all 0.2s ease;
+}
+
+/* When active, hover must always stay pure white */
+.sub-filter-btn.bg-cherry-500:hover,
+.sub-filter-btn.bg-cherry-500:focus,
+.dark .sub-filter-btn.bg-cherry-500:hover,
+.dark .sub-filter-btn.bg-cherry-500:focus {
+  color: #ffffff !important;
+  background-color: #b82430 !important;
+}
+
+/* In dark mode, hover on inactive buttons */
+.dark .sub-filter-btn:not(.bg-cherry-500):hover {
+  background-color: rgba(204, 49, 61, 0.25) !important;
+  color: #ffffff !important;
+}
+
+/* In light mode, hover on inactive buttons */
+.sub-filter-btn:not(.bg-cherry-500):hover {
+  background-color: rgba(204, 49, 61, 0.12) !important;
+  color: #cc313d !important;
+}
+
+/* ======================================================== */
+/* High Contrast Typography: Normal Text Black in Light Mode */
+/* ======================================================== */
+html:not(.dark) body {
+  color: #000000 !important;
+}
+
+/* Normal text: paragraphs, descriptions, subtitles, notes, list items, labels */
+html:not(.dark) p:not(.text-white):not([class*="text-white"]):not([class*="text-bubblegum"]):not([class*="text-cherry"]):not([class*="text-emerald"]):not([class*="text-rose"]):not(.sport-hub-card *):not([class*="from-black"] *),
+html:not(.dark) li:not(.text-white):not([class*="text-white"]):not([class*="text-bubblegum"]):not([class*="text-cherry"]):not(.sport-hub-card *),
+html:not(.dark) label:not(.text-white):not([class*="text-white"]):not([class*="text-bubblegum"]):not([class*="text-cherry"]),
+html:not(.dark) td:not(.text-white):not([class*="text-white"]):not([class*="text-bubblegum"]):not([class*="text-cherry"]):not([class*="text-emerald"]),
+html:not(.dark) th:not(.text-white):not([class*="text-white"]):not([class*="text-bubblegum"]):not([class*="text-cherry"]):not([class*="text-emerald"]),
+html:not(.dark) .text-gray-400:not(.text-white):not([class*="text-white"]):not([class*="text-bubblegum"]):not([class*="text-cherry"]):not([class*="text-emerald"]):not([class*="text-rose"]):not(.sport-hub-card *):not([class*="from-black"] *),
+html:not(.dark) .text-gray-500:not(.text-white):not([class*="text-white"]):not([class*="text-bubblegum"]):not([class*="text-cherry"]):not([class*="text-emerald"]):not([class*="text-rose"]):not(.sport-hub-card *):not([class*="from-black"] *),
+html:not(.dark) .text-gray-600:not(.text-white):not([class*="text-white"]):not([class*="text-bubblegum"]):not([class*="text-cherry"]):not([class*="text-emerald"]):not([class*="text-rose"]):not(.sport-hub-card *):not([class*="from-black"] *),
+html:not(.dark) .text-gray-700:not(.text-white):not([class*="text-white"]):not([class*="text-bubblegum"]):not([class*="text-cherry"]):not([class*="text-emerald"]):not([class*="text-rose"]):not(.sport-hub-card *):not([class*="from-black"] *),
+html:not(.dark) .text-gray-800:not(.text-white):not([class*="text-white"]):not([class*="text-bubblegum"]):not([class*="text-cherry"]):not([class*="text-emerald"]):not([class*="text-rose"]):not(.sport-hub-card *):not([class*="from-black"] *),
+html:not(.dark) .text-gray-900:not(.text-white):not([class*="text-white"]):not([class*="text-bubblegum"]):not([class*="text-cherry"]):not([class*="text-emerald"]):not([class*="text-rose"]):not(.sport-hub-card *):not([class*="from-black"] *) {
+  color: #000000 !important;
+}
+
+/* Headings in light mode */
+html:not(.dark) h1:not([class*="text-transparent"]):not(.text-white):not([class*="text-white"]):not(.sport-hub-card *),
+html:not(.dark) h2:not([class*="text-transparent"]):not(.text-white):not([class*="text-white"]):not(.sport-hub-card *),
+html:not(.dark) h3:not([class*="text-transparent"]):not(.text-white):not([class*="text-white"]):not(.sport-hub-card *),
+html:not(.dark) h4:not([class*="text-transparent"]):not(.text-white):not([class*="text-white"]):not(.sport-hub-card *),
+html:not(.dark) h5:not([class*="text-transparent"]):not(.text-white):not([class*="text-white"]):not(.sport-hub-card *),
+html:not(.dark) h6:not([class*="text-transparent"]):not(.text-white):not([class*="text-white"]):not(.sport-hub-card *) {
+  color: #000000 !important;
+}
+
+/* Footer normal text & links in light mode */
+html:not(.dark) footer,
+html:not(.dark) footer p,
+html:not(.dark) footer span:not([class*="text-cherry"]):not([class*="text-white"]):not([class*="bg-cherry"]),
+html:not(.dark) footer li,
+html:not(.dark) footer a:not(:hover):not([class*="text-cherry"]) {
+  color: #000000 !important;
+}
+
+/* Breadcrumbs in light mode */
+html:not(.dark) .text-gray-500 a:not(:hover),
+html:not(.dark) .text-gray-400 a:not(:hover),
+html:not(.dark) .text-gray-500 span:not([class*="text-cherry"]),
+html:not(.dark) .text-gray-400 span:not([class*="text-cherry"]) {
+  color: #000000 !important;
+}
+
+/* Card titles, subtitles, specs and pricing text in light mode */
+html:not(.dark) .card-title a,
+html:not(.dark) .card-set,
+html:not(.dark) .card-desc,
+html:not(.dark) [id^="d-spec-"]:not([class*="text-cherry"]):not([class*="text-emerald"]) {
+  color: #000000 !important;
+}
+
+/* Preserve active and hover accent colors */
+html:not(.dark) a.text-gray-400:hover,
+html:not(.dark) a.text-gray-500:hover,
+html:not(.dark) a.text-gray-600:hover,
+html:not(.dark) a.text-gray-700:hover,
+html:not(.dark) a.hover\:text-cherry-500:hover,
+html:not(.dark) .hover\:text-cherry-500:hover,
+html:not(.dark) .group:hover .group-hover\:text-cherry-500,
+html:not(.dark) .group\/img:hover .group-hover\/img\:text-cherry-500,
+html:not(.dark) .group\/item:hover .group-hover\/item\:text-cherry-500,
+html:not(.dark) .group\/slab:hover .group-hover\/slab\:text-cherry-500,
+html:not(.dark) footer a:hover {
+  color: #cc313d !important;
+}
+
+/* High-contrast WCAG safeguard for light mode badges and soft pink accents on white surfaces */
+html:not(.dark) .text-bubblegum-dark,
+html:not(.dark) .text-bubblegum:not(.sport-hub-card *):not([class*="from-black"] *):not([class*="from-black"]):not([class*="bg-black"] *):not([class*="bg-black"]):not([class*="card-grade"] *):not(.card-grade) {
+  color: #b82430 !important;
+}
+
+/* Ensure badges, serial tags or pills on dark translucent backgrounds always stay bright white in both modes */
+[class*="bg-black"] .text-bubblegum,
+[class*="bg-black"] span.text-bubblegum,
+html:not(.dark) [class*="bg-black"] .text-bubblegum,
+html:not(.dark) [class*="bg-black"] span.text-bubblegum,
+[class*="bg-black/"] .text-bubblegum,
+html:not(.dark) [class*="bg-black/"] .text-bubblegum,
+.card-grade.bg-cherry-500,
+html:not(.dark) .card-grade.bg-cherry-500,
+span.bg-cherry-500,
+html:not(.dark) span.bg-cherry-500 {
+  color: #ffffff !important;
+}
+
+html:not(.dark) .bg-bubblegum\/20,
+html:not(.dark) .bg-bubblegum\/15 {
+  background-color: rgba(204, 49, 61, 0.1) !important;
+  border-color: rgba(204, 49, 61, 0.25) !important;
+}
+
+/* ========================================================================== */
+/* Dark Overlay Photo Cards (Sport Hubs & Vault Slates) - Both Modes        */
+/* ========================================================================== */
+.sport-hub-card,
+html:not(.dark) .sport-hub-card {
+  background-color: #0b0f19 !important;
+}
+
+.sport-hub-card h3,
+.sport-hub-card h3 *,
+html:not(.dark) .sport-hub-card h3,
+html:not(.dark) .sport-hub-card h3 * {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95);
+}
+
+.sport-hub-card p,
+html:not(.dark) .sport-hub-card p,
+.sport-hub-card .text-gray-200,
+html:not(.dark) .sport-hub-card .text-gray-200,
+.sport-hub-card .text-gray-300,
+html:not(.dark) .sport-hub-card .text-gray-300 {
+  color: #f1f5f9 !important; /* Crisp luminous slate-100 text */
+  font-weight: 500 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
+}
+
+.sport-hub-card .hub-link-bar,
+.sport-hub-card .hub-link-bar span,
+html:not(.dark) .sport-hub-card .hub-link-bar,
+html:not(.dark) .sport-hub-card .hub-link-bar span {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.sport-hub-card .hub-link-bar .hub-count,
+html:not(.dark) .sport-hub-card .hub-link-bar .hub-count {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.sport-hub-card .hub-link-bar .hub-action,
+html:not(.dark) .sport-hub-card .hub-link-bar .hub-action {
+  color: #F7C5CC !important; /* Soft luminous bubblegum pink on dark card background */
+  font-weight: 800 !important;
+}
+
+.sport-hub-card:hover .hub-link-bar .hub-action,
+html:not(.dark) .sport-hub-card:hover .hub-link-bar .hub-action {
+  color: #ffffff !important;
+}
+
+/* Any text-bubblegum or text inside dark photo overlays retains luminous contrast */
+[class*="from-black"] .text-bubblegum,
+[class*="from-black"] span.text-bubblegum,
+html:not(.dark) [class*="from-black"] .text-bubblegum,
+html:not(.dark) [class*="from-black"] span.text-bubblegum {
+  color: #F7C5CC !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+[class*="from-black"] p,
+html:not(.dark) [class*="from-black"] p {
+  color: #f1f5f9 !important;
+}
+
+/* Hero Banner Background Optimization */
+.hero-bg-wrapper {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.hero-bg-img {
+  object-position: center center;
+  image-rendering: -webkit-optimize-contrast;
+  filter: saturate(1.2) contrast(1.06) brightness(1.0);
+}
+
+.vault-hero-bg-img {
+  object-position: center center;
+  image-rendering: -webkit-optimize-contrast;
+  filter: saturate(1.1) contrast(1.05) brightness(0.96);
+  opacity: 0.55;
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.dark .vault-hero-bg-img {
+  filter: saturate(1.15) contrast(1.05) brightness(0.9);
+  opacity: 0.65;
+}
+
+/* Subtitle and text enhancement for hero section */
+html:not(.dark) .hero-copy-desc {
+  color: #030712 !important;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+}
+
+.dark .hero-copy-desc {
+  color: #ffffff !important;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85);
+}
+
+/* ========================================================= */
+/* Scroll Reveal & Dynamic Interactive Scroll Animations     */
+/* ========================================================= */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.45s ease-out, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Stagger Delays for Grid Children */
+.reveal-stagger > *:nth-child(1) { transition-delay: 0.04s; }
+.reveal-stagger > *:nth-child(2) { transition-delay: 0.08s; }
+.reveal-stagger > *:nth-child(3) { transition-delay: 0.12s; }
+.reveal-stagger > *:nth-child(4) { transition-delay: 0.16s; }
+.reveal-stagger > *:nth-child(5) { transition-delay: 0.20s; }
+.reveal-stagger > *:nth-child(6) { transition-delay: 0.24s; }
+
+/* Scale Reveal Variant */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.45s ease-out, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.is-revealed {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Slide in from left/right variants for split sections */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.45s ease-out, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left.is-revealed {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(16px);
+  transition: opacity 0.45s ease-out, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right.is-revealed {
+  opacity: 1;
+  transform: none;
+  will-change: auto;
+}
+
+/* Interactive Card Elevation on Hover */
+.interactive-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+.interactive-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Reduced Motion Preference Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .reveal-scale,
+  .reveal-left,
+  .reveal-right,
+  .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Toast Notification Entry Animation */
+@keyframes toast-in {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-toast-in {
+  animation: toast-in 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Category Page Sport Filter Transition Smoothness */
+.shop-card-item {
+  transition: opacity 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.category-sport-tab {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ========================================================= */
+/* Responsive Optimization Engine (320px, 768px, 1024px)     */
+/* ========================================================= */
+
+/* Narrow Mobile Screens (320px – 380px) */
+@media (max-width: 380px) {
+  /* Fluid heading clamps for tight viewports */
+  h1, .text-4xl, .text-5xl, .text-6xl {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+  }
+  h2, .text-3xl {
+    font-size: 1.35rem !important;
+    line-height: 1.3 !important;
+  }
+  h3, .text-2xl {
+    font-size: 1.2rem !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Prevent long technical text, codes or badges from overflowing */
+  body, p, h1, h2, h3, h4, span, div, a, li {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Input & form element containment */
+  input, select, textarea {
+    max-width: 100% !important;
+  }
+
+  /* Button touch optimization for narrow screens */
+  a.px-7, a.px-8, button.px-8, button.px-7 {
+    padding-left: 1.1rem !important;
+    padding-right: 1.1rem !important;
+  }
+
+  /* Countdown timer digit clamp */
+  .cd-days, .cd-hours, .cd-minutes, .cd-seconds {
+    font-size: 1.35rem !important;
+  }
+
+  /* Form & card inner padding clamps */
+  .p-6, .p-7, .p-8, .p-10, .p-12 {
+    padding: 1.15rem !important;
+  }
+}
+
+/* Tablet Viewport (768px – 1023px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+  /* Ensure tablet header bar has comfortable breathing room */
+  header .max-w-7xl {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  /* Ensure smooth two-column grid balance */
+  .tablet-grid-balance {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Laptop Viewport (1024px – 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  /* Provide extra horizontal breathing space in header bar */
+  header .max-w-7xl {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Desktop Navigation Link Spacing on 1024px Screens */
+  header nav {
+    column-gap: 1.15rem !important;
+  }
+  header nav > * {
+    font-size: 0.825rem !important;
+  }
+  
+  /* Ensure Mega Dropdown fits inside 1024px window */
+  header .dropdown-menu {
+    max-width: 90vw !important;
+  }
+}
+

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Vault Wishlist • CardVault High-Grade Sports Slabs</title>
+  
+  <meta name="description" content="View and manage your saved sports trading card grails, PSA 10 slabs, and rare autograph cards in your CardVault wishlist.">
+  
+  <!-- Immediate Theme & RTL Check -->
+  <script>
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    if (localStorage.getItem('site-dir') === 'rtl') {
+      document.documentElement.setAttribute('dir', 'rtl');
+    }
+  </script>
+
+  <!-- CardVault Logo Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cherry: {
+              50: '#fff1f2',
+              100: '#ffe4e6',
+              200: '#fecdd3',
+              500: '#CC313D',
+              600: '#b0222e',
+              700: '#8f1721',
+            },
+            bubblegum: {
+              DEFAULT: '#F7C5CC',
+              dark: '#e09aa4',
+            },
+            vault: {
+              DEFAULT: '#0b0f19',
+              deep: '#060911',
+              card: '#111827',
+              light: '#1f2937',
+              border: '#2e384d'
+            }
+          },
+          fontFamily: {
+            heading: ['"Noto Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-vault-deep dark:text-gray-100 transition-colors duration-300 antialiased selection:bg-cherry-500 selection:text-white">
+
+  <!-- ================= SECTION 1: FIXED HEADER NAVIGATION ================= -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-vault/95 backdrop-blur-md border-b border-gray-200 dark:border-vault-border transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+            </svg>
+          </div>
+          <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 rtl:space-x-reverse mx-2 xl:mx-4">
+          <div class="relative group nav-dropdown">
+            <button class="dropdown-toggle flex items-center space-x-1.5 rtl:space-x-reverse text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 py-2 transition-colors">
+              <span>Home</span>
+              <svg class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="dropdown-menu absolute left-0 rtl:right-0 mt-1 w-64 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border shadow-2xl hidden group-hover:block z-50 p-2">
+              <a href="index.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-200 font-semibold text-sm transition">
+                <span class="w-8 h-8 rounded-lg bg-gray-200 dark:bg-vault flex items-center justify-center text-gray-500 font-bold text-xs shrink-0">⚡</span>
+                <span class="font-bold text-gray-900 dark:text-white">Sports Card Marketplace</span>
+              </a>
+              <a href="home2.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-200 font-semibold text-sm transition">
+                <span class="w-8 h-8 rounded-lg bg-gray-200 dark:bg-vault flex items-center justify-center text-gray-500 font-bold text-xs shrink-0">🏛️</span>
+                <span class="font-bold text-gray-900 dark:text-white">Vault Custody &amp; Consignment</span>
+              </a>
+            </div>
+          </div>
+          <a href="about.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 dark:hover:text-bubblegum transition">About Us</a>
+          <a href="category.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 dark:hover:text-bubblegum transition">Categories</a>
+          <a href="grading.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 dark:hover:text-bubblegum transition">Grading</a>
+          <a href="blog.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 dark:hover:text-bubblegum transition">Blog</a>
+          <a href="contact.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 dark:hover:text-bubblegum transition">Contact</a>
+        </nav>
+
+        <!-- Utility Toggles & Action Buttons (Matches Image 5) -->
+        <div class="hidden lg:flex items-center space-x-2 xl:space-x-3 rtl:space-x-reverse shrink-0">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border hover:bg-gray-100 dark:hover:bg-vault-light text-gray-600 dark:text-gray-300 transition" title="Toggle Theme" aria-label="Toggle Dark/Light Mode">
+            <svg class="theme-toggle-sun w-5 h-5 hidden text-bubblegum" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+            </svg>
+            <svg class="theme-toggle-moon w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle px-3 py-1.5 rounded-xl border border-gray-200 dark:border-vault-border text-xs font-black hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-300 transition flex items-center gap-1" title="Toggle Text Direction" aria-label="Toggle RTL/LTR">
+            <span class="rtl-text">← RTL</span>
+          </button>
+
+          <!-- Wishlist Button (Matches Image 5) -->
+          <a href="wishlist.html" class="relative p-2.5 rounded-2xl bg-gray-100 dark:bg-vault-card hover:bg-gray-200 dark:hover:bg-vault-light border border-gray-200/80 dark:border-vault-border text-gray-800 dark:text-gray-200 transition flex items-center justify-center group" title="My Vault Wishlist" aria-label="Wishlist">
+            <svg class="w-5 h-5 text-gray-800 dark:text-gray-200 group-hover:text-cherry-500 transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span class="header-wishlist-count absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-cherry-500 text-white text-[10px] font-black flex items-center justify-center shadow-md">0</span>
+          </a>
+
+          <!-- Cart Button (Matches Image 5) -->
+          <a href="cart.html" class="relative p-2.5 rounded-2xl bg-cherry-500 hover:bg-cherry-600 text-white transition flex items-center justify-center shadow-md shadow-cherry-500/25 group" title="Vault Escrow Cart" aria-label="Cart">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+            <span class="header-cart-count absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-white dark:bg-vault-card text-cherry-600 border border-gray-200 dark:border-vault-border text-[10px] font-black flex items-center justify-center shadow-md">0</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center gap-2 shrink-0">
+          <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300 focus:outline-none rounded-lg hover:bg-gray-100 dark:hover:bg-vault-light transition" aria-label="Open Mobile Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path class="line-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+              <path class="line-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+              <path class="line-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 lg:hidden">
+    <div class="mobile-menu-backdrop fixed inset-0 bg-black/70 backdrop-blur-sm"></div>
+    <div class="fixed inset-y-0 right-0 rtl:left-0 rtl:right-auto w-[82vw] max-w-[320px] sm:w-88 bg-white dark:bg-vault p-5 sm:p-6 shadow-2xl flex flex-col justify-between overflow-y-auto border-l rtl:border-r rtl:border-l-0 border-gray-200 dark:border-vault-border">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-gray-200 dark:border-vault-border">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0">
+            <span class="text-xl font-black text-gray-900 dark:text-white font-heading">Card<span class="text-cherry-500">Vault</span></span>
+          </a>
+          <button id="mobile-menu-close" class="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <nav class="mt-6 space-y-3 font-heading text-sm font-bold">
+          <div class="space-y-1">
+            <button class="w-full flex justify-between items-center py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span>Home</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="pl-4 ml-1 space-y-2 hidden border-l-2 border-gray-200 dark:border-vault-border py-1 text-sm">
+              <a href="index.html" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500 font-semibold">Sports Card Marketplace</a>
+              <a href="home2.html" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500 font-semibold">Vault Custody &amp; Consignment</a>
+            </div>
+          </div>
+          <a href="about.html" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-cherry-500">About Us</a>
+
+          <div class="space-y-1">
+            <button class="w-full flex justify-between items-center py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span>Categories</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="pl-4 ml-1 space-y-2 hidden border-l-2 border-gray-200 dark:border-vault-border py-1 text-sm">
+              <a href="category.html?type=baseball" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Baseball ⚾</a>
+              <a href="category.html?type=basketball" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Basketball 🏀</a>
+              <a href="category.html?type=cricket" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Cricket 🏏</a>
+              <a href="category.html?type=football" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Football 🏈</a>
+            </div>
+          </div>
+
+          <a href="grading.html" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-cherry-500">Grading</a>
+          <a href="blog.html" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-cherry-500">Blog</a>
+          <a href="contact.html" class="block py-2 text-gray-700 dark:text-gray-200 hover:text-cherry-500">Contact</a>
+          <div class="pt-3 border-t border-gray-150 dark:border-vault-border space-y-2">
+            <a href="wishlist.html" class="flex items-center justify-between py-2 text-cherry-500">
+              <span>My Wishlist</span>
+              <span class="header-wishlist-count px-2 py-0.5 rounded-full bg-cherry-500 text-white text-xs">0</span>
+            </a>
+            <a href="cart.html" class="flex items-center justify-between py-2 text-cherry-500">
+              <span>Cart</span>
+              <span class="header-cart-count px-2 py-0.5 rounded-full bg-cherry-500 text-white text-xs">0</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-vault-border">
+        <button class="theme-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border hover:bg-gray-100 dark:hover:bg-vault-light text-gray-600 dark:text-gray-300 transition" title="Toggle Theme" aria-label="Toggle Dark/Light Mode">
+          <svg class="theme-toggle-sun w-5 h-5 hidden text-bubblegum" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+          </svg>
+          <svg class="theme-toggle-moon w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+        <button class="rtl-toggle p-2.5 rounded-xl border border-gray-200 dark:border-vault-border text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-vault-light transition text-xs font-bold">
+          <span class="rtl-text">← RTL</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= BREADCRUMBS ================= -->
+  <section class="py-3 bg-white dark:bg-vault border-b border-gray-200 dark:border-vault-border text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div class="flex items-center space-x-2 rtl:space-x-reverse text-gray-500 dark:text-gray-400">
+        <a href="index.html" class="hover:text-cherry-500 transition">Home</a>
+        <span>/</span>
+        <span class="text-cherry-500 font-bold">My Vault Wishlist</span>
+      </div>
+      <span class="text-[11px] text-gray-400 font-medium">Secured with Biometric Vault Telemetry</span>
+    </div>
+  </section>
+
+  <!-- ================= WISHLIST HERO ================= -->
+  <section class="py-10 bg-white dark:bg-vault border-b border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-cherry-500/10 text-cherry-600 dark:text-bubblegum border border-cherry-500/20 mb-3">
+            <span>❤️ Saved Collector Grails</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white font-heading">
+            My Vault Wishlist
+          </h1>
+          <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2 max-w-xl">
+            Keep track of authenticated slabs, pristine rookie refractors, and private treaty lots. Move items directly into your Vault Cart for immediate escrow checkout.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <button onclick="window.clearWishlist()" class="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-vault-border hover:bg-gray-100 dark:hover:bg-vault-light text-xs font-bold text-gray-600 dark:text-gray-300 transition">
+            Clear Wishlist
+          </button>
+          <a href="category.html" class="px-5 py-2.5 rounded-xl bg-cherry-500 hover:bg-cherry-600 text-white font-bold text-xs uppercase tracking-wider transition shadow-md shadow-cherry-500/25">
+            + Explore More Slabs
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WISHLIST MAIN CONTENT ================= -->
+  <main class="py-12 bg-gray-50 dark:bg-vault-deep min-h-[500px]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Container populated by JS -->
+      <div id="wishlist-container">
+        <!-- JS renders items here -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= MASTER FOOTER ================= -->
+  <footer class="bg-gray-100 dark:bg-vault-deep text-gray-600 dark:text-gray-400 py-16 border-t border-gray-200 dark:border-vault-border text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <!-- Col 1: Brand & Overview -->
+        <div class="space-y-4">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+              </svg>
+            </div>
+            <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+          </a>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            The world's premier sports trading card marketplace and institutional vault facility. Powered by forensic authentication, certified grading, and real-time market comps.
+          </p>
+        </div>
+
+        <!-- Col 2: Sport Categories -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Sport Categories</h4>
+          <ul class="space-y-2.5">
+            <li><a href="category.html?type=baseball" class="hover:text-cherry-500 transition">Baseball (Topps Chrome)</a></li>
+            <li><a href="category.html?type=basketball" class="hover:text-cherry-500 transition">Basketball (Prizm &amp; Chrome)</a></li>
+            <li><a href="category.html?type=cricket" class="hover:text-cherry-500 transition">Cricket (Topps Attax &amp; Chrome)</a></li>
+            <li><a href="category.html?type=football" class="hover:text-cherry-500 transition">Football (Composite &amp; RPA)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Depository -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Services & Vault</h4>
+          <ul class="space-y-2.5">
+            <li><a href="grading.html" class="hover:text-cherry-500 transition">PSA Submission Pipeline</a></li>
+            <li><a href="home2.html" class="hover:text-cherry-500 transition">Class 3 Depository Storage</a></li>
+            <li><a href="about.html" class="hover:text-cherry-500 transition">Forensic Authentication Lab</a></li>
+            <li><a href="coming-soon.html" class="hover:text-cherry-500 transition">Next Drop Launchpad</a></li>
+            <li><a href="contact.html" class="hover:text-cherry-500 transition">Private Consignment Intake</a></li>
+            <li><a href="404.html" class="hover:text-cherry-500 transition">404 Error Diagnostics</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Collector Concierge -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Collector Concierge</h4>
+          <p class="text-xs text-gray-500 mb-2">9400 Wilshire Blvd, Suite 800<br>Beverly Hills, CA 90212</p>
+          <p class="text-xs font-mono text-cherry-500 font-bold mb-1"><a href="mailto:concierge@cardvault.com" class="hover:underline">concierge@cardvault.com</a></p>
+          <p class="text-xs text-gray-500"><a href="tel:+18005922273" class="hover:text-cherry-500 transition">+1 (800) 592-CARD</a></p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-gray-200 dark:border-vault-border text-center">
+        <p class="text-center mx-auto">&copy; 2026 CardVault Collectibles Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    window.renderWishlistPage = function() {
+      const container = document.getElementById('wishlist-container');
+      if (!container) return;
+
+      const wishlist = window.getWishlist();
+
+      if (!wishlist || wishlist.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-20 px-4 bg-white dark:bg-vault-card rounded-3xl border border-gray-200 dark:border-vault-border shadow-sm max-w-lg mx-auto">
+            <div class="w-20 h-20 mx-auto rounded-3xl bg-cherry-500/10 text-cherry-500 flex items-center justify-center text-3xl mb-4">
+              ❤️
+            </div>
+            <h3 class="text-xl font-black text-gray-900 dark:text-white font-heading">Your Vault Wishlist is Empty</h3>
+            <p class="text-xs text-gray-500 mt-2 max-w-sm mx-auto leading-relaxed">
+              You haven't saved any graded slabs yet. Explore our curated collections of baseball, basketball, cricket, and football grails to build your portfolio.
+            </p>
+            <div class="mt-6">
+              <a href="category.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-cherry-500 hover:bg-cherry-600 text-white font-black text-xs uppercase tracking-wider transition shadow-lg shadow-cherry-500/25">
+                Browse Graded Slabs →
+              </a>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      const totalValue = wishlist.reduce((sum, item) => sum + Number(item.price || 0), 0);
+
+      container.innerHTML = `
+        <div class="mb-6 flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+          <span>Showing <strong class="text-gray-900 dark:text-white font-bold">${wishlist.length}</strong> saved items</span>
+          <span>Estimated Wishlist Value: <strong class="text-cherry-500 font-black text-sm">$${totalValue.toLocaleString()}</strong></span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          ${wishlist.map(item => `
+            <div class="p-4 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border h-full flex flex-col justify-between hover:shadow-xl transition group">
+              <div>
+                <a href="card-details.html?id=${item.id}" class="block relative rounded-xl overflow-hidden aspect-[3/4] bg-vault-deep mb-3 holo-shimmer border border-gray-100 dark:border-vault-border">
+                  <img src="${item.image || 'assets/images/shohei-ohtani-17.jpg'}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                  <div class="absolute top-2.5 left-2.5 px-2 py-0.5 rounded bg-cherry-500 text-white font-black text-[10px] tracking-wider shadow">
+                    ${item.grade || 'PSA 10'}
+                  </div>
+                  <button onclick="window.removeFromWishlist('${item.id}')" class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full bg-black/70 hover:bg-cherry-500 text-white flex items-center justify-center transition" title="Remove from Wishlist">
+                    ✕
+                  </button>
+                </a>
+                <div class="text-[10px] font-black uppercase text-cherry-500 tracking-wider">
+                  ${item.sport || 'Sports'} ${item.emoji || '🏆'}
+                </div>
+                <h4 class="font-bold text-sm text-gray-900 dark:text-white mt-1 group-hover:text-cherry-500 transition line-clamp-1 min-h-[1.5rem] flex items-center">
+                  <a href="card-details.html?id=${item.id}">${item.name}</a>
+                </h4>
+                <p class="text-xs text-gray-500 mt-0.5 line-clamp-1 min-h-[1.25rem] flex items-center">${item.serial || 'Certified Slab'}</p>
+              </div>
+
+              <div class="mt-auto pt-3.5 border-t border-gray-100 dark:border-vault-border flex items-center justify-between">
+                <div>
+                  <span class="text-[9px] text-gray-400 uppercase font-black tracking-wider block">Price</span>
+                  <div class="text-base font-black text-gray-900 dark:text-white font-heading">
+                    $${Number(item.price || 0).toLocaleString()}
+                  </div>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <button onclick="window.moveWishlistToCart('${item.id}')" class="px-3 py-2 rounded-xl bg-cherry-500 hover:bg-cherry-600 text-white font-bold text-xs uppercase tracking-wider transition shadow-sm shadow-cherry-500/20 flex items-center gap-1">
+                    <span>Move to Cart</span>
+                    <span>🛒</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      window.renderWishlistPage();
+    });
+  </script>
+</body>
+</html>

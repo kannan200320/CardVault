@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | CardVault - Heritage, Security & Authentic Sports Collecting</title>
+  <meta name="description" content="Learn about CardVault's mission, leadership, Class 3 vault facility, and forensic authentication standards for Topps, Bowman, and rare sports trading cards.">
+  <meta name="keywords" content="about CardVault, sports card history, card authenticators, PSA dealer, trading card vault">
+
+  <!-- Immediate Theme & RTL Check -->
+  <script>
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    if (localStorage.getItem('site-dir') === 'rtl') {
+      document.documentElement.setAttribute('dir', 'rtl');
+    }
+  </script>
+
+  <!-- CardVault Logo Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Noto Sans (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cherry: {
+              50: '#fdf2f4',
+              100: '#fbe4e8',
+              200: '#f7c5cc', // Bubblegum Pink #F7C5CC
+              300: '#f199a6',
+              400: '#e56476',
+              500: '#cc313d', // Cherry Red #CC313D
+              600: '#b82430',
+              700: '#991b26',
+              800: '#801a23',
+              900: '#6c1b22',
+            },
+            bubblegum: {
+              light: '#fdf0f2',
+              DEFAULT: '#F7C5CC',
+              dark: '#f199a6',
+            },
+            vault: {
+              DEFAULT: '#0b0f19',
+              deep: '#060911',
+              card: '#111827',
+              light: '#1f2937',
+              border: '#2e384d'
+            }
+          },
+          fontFamily: {
+            heading: ['"Noto Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-vault-deep dark:text-gray-100 transition-colors duration-300 antialiased selection:bg-cherry-500 selection:text-white">
+
+  <!-- ================= SECTION 1: FIXED HEADER NAVIGATION ================= -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-vault/95 backdrop-blur-md border-b border-gray-200 dark:border-vault-border transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+            </svg>
+          </div>
+          <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 rtl:space-x-reverse mx-2 xl:mx-4">
+          <div class="relative group nav-dropdown">
+            <button class="dropdown-toggle flex items-center space-x-1.5 rtl:space-x-reverse text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 py-2 transition-colors">
+              <span>Home</span>
+              <svg class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="dropdown-menu absolute left-0 rtl:right-0 mt-1 w-64 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border shadow-2xl hidden group-hover:block z-50 p-2">
+              <a href="index.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-200 font-semibold text-sm transition">
+                <span class="w-8 h-8 rounded-lg bg-gray-200 dark:bg-vault flex items-center justify-center text-gray-500 font-bold text-xs shrink-0">⚡</span>
+                <span class="font-bold text-gray-900 dark:text-white">Sports Card Marketplace</span>
+              </a>
+              <a href="home2.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-200 font-semibold text-sm transition">
+                <span class="w-8 h-8 rounded-lg bg-gray-200 dark:bg-vault flex items-center justify-center text-gray-500 font-bold text-xs shrink-0">🏛️</span>
+                <span class="font-bold text-gray-900 dark:text-white">Vault Custody &amp; Consignment</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="about.html" class="text-sm font-bold text-cherry-500 transition">About Us</a>
+
+          <!-- Categories Mega Dropdown -->
+          <div class="relative group nav-dropdown">
+            <button class="dropdown-toggle flex items-center space-x-1.5 rtl:space-x-reverse text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 py-2 transition-colors">
+              <span>Categories</span>
+              <svg class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="dropdown-menu absolute left-1/2 -translate-x-1/2 rtl:translate-x-1/2 mt-1 w-[90vw] max-w-[680px] xl:w-[720px] rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border shadow-2xl hidden group-hover:block z-50 p-4 xl:p-5">
+              <div class="flex items-center justify-between pb-3 mb-4 border-b border-gray-100 dark:border-gray-800">
+                <h4 class="text-xs font-black uppercase tracking-wider text-cherry-500 font-heading">Explore By Sport Categories</h4>
+                <a href="category.html?type=baseball" class="text-xs font-bold text-gray-500 hover:text-cherry-500 transition">Explore All Graded Slabs →</a>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <a href="category.html?type=baseball" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="assets/images/hero-banner.jpg" alt="Baseball" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Baseball ⚾</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Chrome, Bowman 1st, Ohtani</p><span class="inline-block mt-1 text-[10px] font-bold text-cherry-500 bg-cherry-500/10 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">6 Slabs Available</span></div>
+                </a>
+                <a href="category.html?type=basketball" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="assets/images/victor-wembanyama-1.jpg" alt="Basketball" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Basketball 🏀</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Chrome, Prizm, Wembanyama</p><span class="inline-block mt-1 text-[10px] font-bold text-cherry-500 bg-cherry-500/10 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">6 Slabs Available</span></div>
+                </a>
+                <a href="category.html?type=cricket" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="assets/images/cricket-hub.jpg" alt="Cricket" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Cricket 🏏</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Attax, Century Club, Kohli Auto</p><span class="inline-block mt-1 text-[10px] font-bold text-cherry-500 bg-cherry-500/10 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">6 Slabs Available</span></div>
+                </a>
+                <a href="category.html?type=football" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="assets/images/football-hub.jpg" alt="Football" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Football 🏈</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Composite, Contenders, Mahomes</p><span class="inline-block mt-1 text-[10px] font-bold text-cherry-500 bg-cherry-500/10 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">6 Slabs Available</span></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="grading.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 transition">Grading</a>
+          <a href="blog.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 transition">Blog</a>
+          <a href="contact.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 transition">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center space-x-2 xl:space-x-3 rtl:space-x-reverse shrink-0">
+          <button class="theme-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border hover:bg-gray-100 dark:hover:bg-vault-light text-gray-600 dark:text-gray-300 transition" aria-label="Toggle Theme">
+            <svg class="theme-toggle-sun w-5 h-5 hidden text-bubblegum" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path></svg>
+            <svg class="theme-toggle-moon w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+          <button class="rtl-toggle px-3 py-1.5 rounded-xl border border-gray-200 dark:border-vault-border text-xs font-black text-gray-700 dark:text-gray-300 transition">
+            <span class="rtl-text">← RTL</span>
+          </button>
+          <!-- Wishlist Button (Matches Image 5) -->
+          <a href="wishlist.html" class="relative p-2.5 rounded-2xl bg-gray-100 dark:bg-vault-card hover:bg-gray-200 dark:hover:bg-vault-light border border-gray-200/80 dark:border-vault-border text-gray-800 dark:text-gray-200 transition flex items-center justify-center group" title="My Vault Wishlist" aria-label="Wishlist">
+            <svg class="w-5 h-5 text-gray-800 dark:text-gray-200 group-hover:text-cherry-500 transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span class="header-wishlist-count absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-cherry-500 text-white text-[10px] font-black flex items-center justify-center shadow-md">0</span>
+          </a>
+
+          <!-- Cart Button (Matches Image 5) -->
+          <a href="cart.html" class="relative p-2.5 rounded-2xl bg-cherry-500 hover:bg-cherry-600 text-white transition flex items-center justify-center shadow-md shadow-cherry-500/25 group" title="Vault Escrow Cart" aria-label="Cart">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+            <span class="header-cart-count absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-white dark:bg-vault-card text-cherry-600 border border-gray-200 dark:border-vault-border text-[10px] font-black flex items-center justify-center shadow-md">0</span>
+          </a>
+        </div>
+
+        <div class="lg:hidden flex items-center gap-2 shrink-0">
+          <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300 focus:outline-none rounded-lg hover:bg-gray-100 dark:hover:bg-vault-light transition" aria-label="Open Mobile Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path class="line-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+              <path class="line-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+              <path class="line-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/70 lg:hidden">
+    <div class="mobile-menu-backdrop absolute inset-0"></div>
+    <div class="absolute top-0 right-0 rtl:left-0 rtl:right-auto w-[82vw] max-w-[320px] sm:w-88 h-full bg-white dark:bg-vault-card p-5 sm:p-6 shadow-2xl flex flex-col justify-between transition-transform duration-300 z-10 overflow-y-auto">
+      <div class="space-y-6">
+        <div class="flex justify-between items-center pb-4 border-b border-gray-200 dark:border-vault-border">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+              </svg>
+            </div>
+            <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+          </a>
+          <button id="mobile-menu-close" class="p-2 text-gray-500 hover:text-cherry-500 focus:outline-none" aria-label="Close Mobile Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <nav class="space-y-3">
+          <div class="space-y-1">
+            <button class="w-full flex justify-between items-center py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span>Home</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="pl-4 ml-1 space-y-2 hidden border-l-2 border-gray-200 dark:border-vault-border py-1 text-sm">
+              <a href="index.html" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500 font-semibold">Sports Card Marketplace</a>
+              <a href="home2.html" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500 font-semibold">Vault Custody &amp; Consignment</a>
+            </div>
+          </div>
+          <a href="about.html" class="block py-2 text-cherry-500 font-bold text-sm">About Us</a>
+
+          <div class="space-y-1">
+            <button class="w-full flex justify-between items-center py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span>Categories</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="pl-4 ml-1 space-y-2 hidden border-l-2 border-gray-200 dark:border-vault-border py-1 text-sm">
+              <a href="category.html?type=baseball" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Baseball ⚾</a>
+              <a href="category.html?type=basketball" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Basketball 🏀</a>
+              <a href="category.html?type=cricket" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Cricket 🏏</a>
+              <a href="category.html?type=football" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Football 🏈</a>
+            </div>
+          </div>
+
+          <a href="grading.html" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm">Grading</a>
+          <a href="blog.html" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm">Blog</a>
+          <a href="contact.html" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm">Contact</a>
+        </nav>
+      </div>
+      <div class="space-y-4 pt-6">
+        <div class="space-y-2 pt-2 border-t border-gray-150 dark:border-vault-border">
+          <a href="wishlist.html" class="flex items-center justify-between py-2 text-cherry-500 font-bold text-sm">
+            <span>My Wishlist</span>
+            <span class="header-wishlist-count px-2 py-0.5 rounded-full bg-cherry-500 text-white text-xs">0</span>
+          </a>
+          <a href="cart.html" class="flex items-center justify-between py-2 text-cherry-500 font-bold text-sm">
+            <span>Cart</span>
+            <span class="header-cart-count px-2 py-0.5 rounded-full bg-cherry-500 text-white text-xs">0</span>
+          </a>
+        </div>
+        <div class="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-vault-border">
+          <button class="theme-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border hover:bg-gray-100 dark:hover:bg-vault-light text-gray-600 dark:text-gray-300 transition" title="Toggle Theme" aria-label="Toggle Dark/Light Mode">
+            <svg class="theme-toggle-sun w-5 h-5 hidden text-bubblegum" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+            </svg>
+            <svg class="theme-toggle-moon w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+          <button class="rtl-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border text-xs font-bold"><span class="rtl-text">← RTL</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 2: HERO ARCHIVAL SECTION ================= -->
+  <section class="py-16 lg:py-24 bg-gradient-to-b from-cherry-500/10 via-transparent to-transparent border-b border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-black bg-cherry-500/10 text-cherry-600 dark:text-bubblegum border border-cherry-500/20">
+            ESTABLISHED 2018 • BEVERLY HILLS, CA
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white font-heading leading-tight">
+            The Archival Standard in <span class="text-cherry-500">Sports Card</span> Custody
+          </h1>
+          <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-sans max-w-2xl">
+            CardVault was founded on a singular conviction: sports trading cards are not toys—they are historical cultural artifacts and alternative assets that demand institutional-grade custody, forensic authentication, and zero-risk liquidity.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#timeline" class="bg-cherry-500 hover:bg-cherry-600 text-white px-7 py-3.5 rounded-xl font-bold font-heading text-xs uppercase tracking-wider transition shadow-lg shadow-cherry-500/25">
+              Our Journey Timeline
+            </a>
+            <a href="grading.html" class="bg-white dark:bg-vault-card border border-gray-300 dark:border-vault-border text-gray-900 dark:text-white px-7 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider hover:border-cherry-500 transition">
+              Explore Our Standards
+            </a>
+          </div>
+
+          <!-- Archival Trust Counters -->
+          <div class="pt-6 border-t border-gray-200 dark:border-vault-border grid grid-cols-3 gap-1.5 sm:gap-4 text-center sm:text-left rtl:sm:text-right">
+            <div>
+              <div class="text-base sm:text-2xl lg:text-3xl font-black text-gray-900 dark:text-white font-heading">$48.5M+</div>
+              <div class="text-[9px] sm:text-xs text-gray-500 dark:text-gray-400 font-medium leading-tight">Bunker Vault</div>
+            </div>
+            <div>
+              <div class="text-base sm:text-2xl lg:text-3xl font-black text-cherry-500 font-heading">18,200+</div>
+              <div class="text-[9px] sm:text-xs text-gray-500 dark:text-gray-400 font-medium leading-tight">PSA & BGS 10</div>
+            </div>
+            <div>
+              <div class="text-base sm:text-2xl lg:text-3xl font-black text-gray-900 dark:text-white font-heading">100%</div>
+              <div class="text-[9px] sm:text-xs text-gray-500 dark:text-gray-400 font-medium leading-tight">Authenticity</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 relative">
+          <div class="rounded-3xl overflow-hidden border-2 border-cherry-500/30 shadow-2xl bg-vault aspect-square">
+            <img src="assets/images/beverly-hills-vault-room.jpg" alt="CardVault Beverly Hills Vault Cultural Artifacts & Sports Card Custody" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 3: CORE VALUES GRID ================= -->
+  <section class="py-16 bg-white dark:bg-vault">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase font-black tracking-widest text-cherry-500 font-heading">Our Guiding Pillars</span>
+        <h2 class="text-3xl font-black text-gray-900 dark:text-white font-heading mt-2">The Four Vault Commitments</h2>
+        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2">
+          Every policy, technological investment, and custody workflow at CardVault is engineered to protect capital and guarantee archival longevity.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border flex flex-col justify-between h-full">
+          <div>
+            <div class="text-2xl mb-2">🔬</div>
+            <h4 class="font-bold text-base text-gray-900 dark:text-white font-heading min-h-[1.75rem] flex items-center">Zero Counterfeits Policy</h4>
+            <p class="text-xs text-gray-500 mt-2 leading-relaxed min-h-[5.5rem]">
+              We subject every incoming card to dual-polarization microscopic scans, paper thickness micrometers, and UV ink spectrometry to detect doctoring, reglossing, trimmed borders, or modern counterfeit print patterns.
+            </p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-150 dark:border-vault-border text-[11px] font-bold text-cherry-500">
+            ✓ 50x Optical Forensic Scans
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border flex flex-col justify-between h-full">
+          <div>
+            <div class="text-2xl mb-2">🛡️</div>
+            <h4 class="font-bold text-base text-gray-900 dark:text-white font-heading min-h-[1.75rem] flex items-center">100% Escrow Custody</h4>
+            <p class="text-xs text-gray-500 mt-2 leading-relaxed min-h-[5.5rem]">
+              Buyer settlement funds remain held in segregated, FDIC-insured trust accounts. Payout wires are only released to consignors once the buyer confirms pristine sonic welds and verified registry cert authenticity.
+            </p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-150 dark:border-vault-border text-[11px] font-bold text-cherry-500">
+            ✓ 48-Hour Inspection Window
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border flex flex-col justify-between h-full">
+          <div>
+            <div class="text-2xl mb-2">🌍</div>
+            <h4 class="font-bold text-base text-gray-900 dark:text-white font-heading min-h-[1.75rem] flex items-center">Global Four-Sport Reach</h4>
+            <p class="text-xs text-gray-500 mt-2 leading-relaxed min-h-[5.5rem]">
+              From Topps Chrome MLB refractors and NBA modern grails to Indian/UK international cricket relics and NFL rookie autographs, we treat each discipline with dedicated category specialization and checklist indexing.
+            </p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-150 dark:border-vault-border text-[11px] font-bold text-cherry-500">
+            ✓ Baseball • Basketball • Cricket • Football
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border flex flex-col justify-between h-full">
+          <div>
+            <div class="text-2xl mb-2">⚡</div>
+            <h4 class="font-bold text-base text-gray-900 dark:text-white font-heading min-h-[1.75rem] flex items-center">Instant Title Liquidity</h4>
+            <p class="text-xs text-gray-500 mt-2 leading-relaxed min-h-[5.5rem]">
+              Vault-to-vault title transfers execute in seconds with zero shipping risk and 0% state sales tax. Owners can trade, collateralize, or consign high-value slabs across global borders without moving the physical asset.
+            </p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-150 dark:border-vault-border text-[11px] font-bold text-cherry-500">
+            ✓ 0% Sales Tax Vault Storage
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 4: LEADERSHIP TEAM ================= -->
+  <section class="py-16 lg:py-24 bg-gray-50 dark:bg-vault-deep border-t border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-16">
+        <span class="text-xs uppercase font-black tracking-widest text-cherry-500 font-heading">Curators & Authenticators</span>
+        <h2 class="text-3xl font-black text-gray-900 dark:text-white font-heading mt-2">Our Executive Leadership</h2>
+        <p class="text-xs text-gray-500 mt-2">Over 65 combined years in numismatics, fine art logistics, paper conservation, and sports card certification.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-5 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border text-center">
+          <div class="w-24 h-24 mx-auto rounded-full overflow-hidden bg-vault-deep mb-4 border-2 border-cherry-500/40">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Sarah Lin" class="w-full h-full object-cover">
+          </div>
+          <h4 class="font-bold text-sm text-gray-900 dark:text-white">Sarah Lin, PhD</h4>
+          <span class="text-xs text-cherry-500 font-semibold">Chief Forensic Conservator</span>
+          <p class="text-[11px] text-gray-500 mt-2 leading-relaxed">Former Smithsonian paper conservator specializing in post-war 1952 Topps card stocks, ink bleaching detection, and chromium refractor layer chemistry.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border text-center">
+          <div class="w-24 h-24 mx-auto rounded-full overflow-hidden bg-vault-deep mb-4 border-2 border-cherry-500/40">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="David Sterling" class="w-full h-full object-cover">
+          </div>
+          <h4 class="font-bold text-sm text-gray-900 dark:text-white">David Sterling</h4>
+          <span class="text-xs text-cherry-500 font-semibold">Co-Founder & Head of Acquisitions</span>
+          <p class="text-[11px] text-gray-500 mt-2 leading-relaxed">Brokered over $85M in private sales of 1952 Mickey Mantles and 1986 Fleer Jordans. Trusted advisor to professional athletes and family offices.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border text-center">
+          <div class="w-24 h-24 mx-auto rounded-full overflow-hidden bg-vault-deep mb-4 border-2 border-cherry-500/40">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Arjun Mehta" class="w-full h-full object-cover">
+          </div>
+          <h4 class="font-bold text-sm text-gray-900 dark:text-white">Arjun Mehta</h4>
+          <span class="text-xs text-cherry-500 font-semibold">Director of International Sports</span>
+          <p class="text-[11px] text-gray-500 mt-2 leading-relaxed">Leading international authority on vintage and modern cricket cards, Topps Attax rarities, match-used jersey relics, and Commonwealth sporting collectibles.</p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border text-center">
+          <div class="w-24 h-24 mx-auto rounded-full overflow-hidden bg-vault-deep mb-4 border-2 border-cherry-500/40">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Rachel Vance" class="w-full h-full object-cover">
+          </div>
+          <h4 class="font-bold text-sm text-gray-900 dark:text-white">Rachel Vance</h4>
+          <span class="text-xs text-cherry-500 font-semibold">VP of Vault Operations</span>
+          <p class="text-[11px] text-gray-500 mt-2 leading-relaxed">12 years managing high-security biometric vaults, Lloyd's syndicate risk assessments, and armored intercontinental logistics for high-net-worth investors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 5: MILESTONES TIMELINE ================= -->
+  <section id="timeline" class="py-16 lg:py-24 bg-white dark:bg-vault border-t border-gray-200 dark:border-vault-border">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase font-black tracking-widest text-cherry-500 font-heading">Chronology</span>
+        <h2 class="text-3xl font-black text-gray-900 dark:text-white font-heading mt-2">Milestones in Card History</h2>
+      </div>
+
+      <div class="space-y-8 relative before:absolute before:inset-0 before:left-1/2 before:-translate-x-1/2 before:w-0.5 before:bg-cherry-500/30">
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-cherry-500 text-white font-black text-xs shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+            18
+          </div>
+          <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2rem)] p-4 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border">
+            <span class="text-xs font-bold text-cherry-500">2018</span>
+            <h4 class="font-bold text-sm text-gray-900 dark:text-white mt-0.5">CardVault Founded in Beverly Hills</h4>
+            <p class="text-xs text-gray-500 mt-1">Established as an invitation-only private concierge for six-figure sports card transactions and escrow settlement.</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-cherry-500 text-white font-black text-xs shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+            21
+          </div>
+          <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2rem)] p-4 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border">
+            <span class="text-xs font-bold text-cherry-500">2021</span>
+            <h4 class="font-bold text-sm text-gray-900 dark:text-white mt-0.5">Class 3 Depository Bunker Opened</h4>
+            <p class="text-xs text-gray-500 mt-1">Expanded to a 12,000 sq ft subterranean facility protected by FM-200 clean-agent gas and underwriting by Lloyd's of London.</p>
+          </div>
+        </div>
+
+        <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-cherry-500 text-white font-black text-xs shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+            24
+          </div>
+          <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2rem)] p-4 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border">
+            <span class="text-xs font-bold text-cherry-500">2024</span>
+            <h4 class="font-bold text-sm text-gray-900 dark:text-white mt-0.5">Global Four-Sport Category Architecture</h4>
+            <p class="text-xs text-gray-500 mt-1">Launched certified intake pipelines for South Asian & UK cricket grails alongside premier Topps Baseball, Basketball, and Football card databases.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 6: BEVERLY HILLS VAULT FACILITY TOUR ================= -->
+  <section class="py-16 lg:py-24 bg-gray-50 dark:bg-vault-deep border-t border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left: Copy & 2x2 Spec Grid -->
+        <div class="lg:col-span-6 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-black bg-cherry-500/10 text-cherry-600 dark:text-bubblegum border border-cherry-500/20">
+            <span>🛡️ Subterranean Physical Security</span>
+          </div>
+
+          <h3 class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white font-heading leading-tight">
+            Inside the CardVault Beverly Hills Depository
+          </h3>
+
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-sans">
+            Engineered below ground level in Beverly Hills, California, our Class 3 maximum-security depository represents the gold standard in sports card preservation. Constructed from 4,000 PSI steel-reinforced ballistic concrete with seismically isolated slab racks, the facility was designed specifically to eliminate every environmental risk factor known to degrade paper fiber, holographic foils, and chrome surfaces.
+          </p>
+
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-sans">
+            Every cardholder rests inside positive-pressure nitrogen-purged micro-chambers maintaining less than 2 parts-per-million moisture. Unlike traditional safe deposit boxes, our vault features dedicated clean-agent gaseous fire suppression that neutralizes heat in under 10 seconds without deploying a single drop of water, ensuring multimillion-dollar grails remain in museum-grade stasis for generations.
+          </p>
+          
+          <!-- Balanced 2x2 Spec Grid with Exact Baselines -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-3">
+            
+            <!-- Spec 1: Vault Door -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border hover:border-cherry-500/40 hover:shadow-lg transition flex flex-col justify-between h-full group">
+              <div>
+                <div class="flex items-center justify-between min-h-[1.75rem] mb-2">
+                  <span class="text-[11px] font-black uppercase tracking-wider text-gray-500 dark:text-gray-400">Vault Door</span>
+                  <span class="w-7 h-7 rounded-lg bg-gray-100 dark:bg-vault flex items-center justify-center text-sm group-hover:scale-110 transition">🚪</span>
+                </div>
+                <strong class="text-base sm:text-lg font-black text-gray-900 dark:text-white font-heading block min-h-[1.75rem] flex items-center">
+                  18" Solid Steel
+                </strong>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed min-h-[2.5rem] flex items-start">
+                  Class 3 Mosler bank blast door with time-delay dual locking.
+                </p>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100 dark:border-vault-border flex items-center justify-between text-[11px]">
+                <span class="text-gray-400 font-medium">Standard</span>
+                <span class="font-bold text-cherry-500">Class 3 Mosler</span>
+              </div>
+            </div>
+
+            <!-- Spec 2: Insurance -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border hover:border-cherry-500/40 hover:shadow-lg transition flex flex-col justify-between h-full group">
+              <div>
+                <div class="flex items-center justify-between min-h-[1.75rem] mb-2">
+                  <span class="text-[11px] font-black uppercase tracking-wider text-gray-500 dark:text-gray-400">Insurance</span>
+                  <span class="w-7 h-7 rounded-lg bg-cherry-500/10 text-cherry-500 flex items-center justify-center text-sm group-hover:scale-110 transition">🛡️</span>
+                </div>
+                <strong class="text-base sm:text-lg font-black text-cherry-500 font-heading block min-h-[1.75rem] flex items-center">
+                  $500,000,000
+                </strong>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed min-h-[2.5rem] flex items-start">
+                  All-risk Lloyd's of London syndicated depository coverage.
+                </p>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100 dark:border-vault-border flex items-center justify-between text-[11px]">
+                <span class="text-gray-400 font-medium">Underwriter</span>
+                <span class="font-bold text-emerald-500">Lloyd's Syndicate</span>
+              </div>
+            </div>
+
+            <!-- Spec 3: Climate Control -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border hover:border-cherry-500/40 hover:shadow-lg transition flex flex-col justify-between h-full group">
+              <div>
+                <div class="flex items-center justify-between min-h-[1.75rem] mb-2">
+                  <span class="text-[11px] font-black uppercase tracking-wider text-gray-500 dark:text-gray-400">Climate Control</span>
+                  <span class="w-7 h-7 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center text-sm group-hover:scale-110 transition">🌡️</span>
+                </div>
+                <strong class="text-base sm:text-lg font-black text-gray-900 dark:text-white font-heading block min-h-[1.75rem] flex items-center">
+                  68°F / 45% RH
+                </strong>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed min-h-[2.5rem] flex items-start">
+                  Continuous ISO Class 5 particulate nitrogen-purged filtration.
+                </p>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100 dark:border-vault-border flex items-center justify-between text-[11px]">
+                <span class="text-gray-400 font-medium">Atmosphere</span>
+                <span class="font-bold text-emerald-500">Museum DIN 6730</span>
+              </div>
+            </div>
+
+            <!-- Spec 4: Biometrics -->
+            <div class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border hover:border-cherry-500/40 hover:shadow-lg transition flex flex-col justify-between h-full group">
+              <div>
+                <div class="flex items-center justify-between min-h-[1.75rem] mb-2">
+                  <span class="text-[11px] font-black uppercase tracking-wider text-gray-500 dark:text-gray-400">Biometrics</span>
+                  <span class="w-7 h-7 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center text-sm group-hover:scale-110 transition">👁️</span>
+                </div>
+                <strong class="text-base sm:text-lg font-black text-gray-900 dark:text-white font-heading block min-h-[1.75rem] flex items-center">
+                  Dual Iris Scan
+                </strong>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed min-h-[2.5rem] flex items-start">
+                  Triple-factor retina authentication with 24/7 armed escort.
+                </p>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100 dark:border-vault-border flex items-center justify-between text-[11px]">
+                <span class="text-gray-400 font-medium">Access Tier</span>
+                <span class="font-bold text-cherry-500">Triple-Factor</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Facility Image Showcase -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="rounded-3xl overflow-hidden border-2 border-cherry-500/30 shadow-2xl aspect-[4/3] bg-vault relative group">
+            <img src="assets/images/subterranean-depository-vault.jpg" alt="Subterranean Physical Security Inside the CardVault Beverly Hills Depository" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md rounded-2xl p-4 border border-white/10 text-white flex items-center justify-between text-xs">
+              <div>
+                <span class="text-[10px] font-mono text-bubblegum block font-bold">FACILITY ID: BEV-HILLS-V3</span>
+                <span class="font-bold text-xs sm:text-sm">Active Depository Bay Alpha-4</span>
+              </div>
+              <span class="px-3 py-1.5 rounded-xl bg-emerald-500/20 text-emerald-400 font-black text-[10px] border border-emerald-500/30">
+                ● 24/7 Monitored
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 7: CERTIFICATION CODE OF ETHICS ================= -->
+  <section class="py-16 lg:py-24 bg-white dark:bg-vault border-t border-gray-200 dark:border-vault-border">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-8 sm:p-12 rounded-3xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border space-y-8">
+        <div class="max-w-2xl">
+          <span class="text-xs font-black uppercase text-cherry-500 tracking-wider font-heading">Fiduciary Standards</span>
+          <h3 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white font-heading mt-1">Our Binding Code of Collector Ethics</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-2 leading-relaxed">
+            The sports collectibles industry has long suffered from opaque auctions, trimmed cards, and phantom bids. CardVault operates under a legally binding charter of collector ethics that governs every employee, curator, and partner.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div class="p-5 rounded-2xl bg-white dark:bg-vault border border-gray-200 dark:border-vault-border space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-cherry-500/10 text-cherry-500 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white">Strict Anti-Shill & Bid Integrity</h4>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              No employee, board member, or affiliated broker is permitted to participate in CardVault auctions under any circumstances. All bid logs undergo automated cryptographic hashing to prevent simulated demand or reserve manipulation.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white dark:bg-vault border border-gray-200 dark:border-vault-border space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-cherry-500/10 text-cherry-500 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white">50x Microscopic Flaw Disclosure</h4>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              We never conceal print dots, corner fiber softening, roller marks, or hairline refractor scratches. Our 50x optical zoom audits document both the virtues and imperfections of each slab before any card is cataloged.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white dark:bg-vault border border-gray-200 dark:border-vault-border space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-cherry-500/10 text-cherry-500 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white">Segregated Client Escrow Accounts</h4>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Buyer settlement funds are held in isolated FDIC-insured escrow trusts until 48 hours following physical delivery or vault title confirmation. Consignor holdings are legally held in bailment and are immune to corporate liabilities.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white dark:bg-vault border border-gray-200 dark:border-vault-border space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-cherry-500/10 text-cherry-500 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white">Ultrasonic Sonic Weld Verification</h4>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Every encapsulated card is cross-checked against PSA, Beckett, and SGC digital population registries. We utilize refraction spectroscopy to verify that the acrylic sonic weld has not been cracked, buffed, or swapped with a counterfeit.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white dark:bg-vault border border-gray-200 dark:border-vault-border space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-cherry-500/10 text-cherry-500 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white">Independent Valuation Comp Anchors</h4>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              CardVault valuations are never inflated. Every estimated price range is calculated directly from public auction sales across Heritage, Goldin, and PWCC with complete serial-number matching and date verification.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white dark:bg-vault border border-gray-200 dark:border-vault-border space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-full bg-cherry-500/10 text-cherry-500 flex items-center justify-center font-bold text-xs shrink-0">✓</span>
+              <h4 class="font-bold text-sm text-gray-900 dark:text-white">100% Lifetime Buyback Guarantee</h4>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              If an encapsulated card sold on CardVault is ever proven to be recolored, altered, or misattributed by an accredited third-party grader, we issue an immediate 100% refund with full shipping and grading cost indemnification.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 8: WALL OF FAME / COLLECTOR VOICES ================= -->
+  <section class="py-16 lg:py-24 bg-gray-50 dark:bg-vault-deep border-t border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase font-black tracking-widest text-cherry-500 font-heading">Archival Case Studies</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white font-heading mt-2">Wall of Vaulted Grails</h2>
+        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2">
+          Read real stories from global collectors, hedge fund portfolio managers, and vintage curators who entrust CardVault with six-figure sports artifacts.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Case Study 1: Kenji Takahashi -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border flex flex-col justify-between hover:shadow-xl transition">
+          <div>
+            <div class="flex items-center gap-3 pb-4 mb-4 border-b border-gray-150 dark:border-vault-border">
+              <div class="w-12 h-12 rounded-xl overflow-hidden bg-vault border border-cherry-500/30 shrink-0">
+                <img src="../../.gemini/antigravity/brain/23f69f4a-ec0b-41a3-8b4b-ea9a9bffa028/.user_uploaded/media_1792300135457.jpg" alt="Kenji Takahashi" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <span class="text-[10px] font-black uppercase text-cherry-500">Baseball ⚾ • Tokyo, Japan</span>
+                <h4 class="font-bold text-sm text-gray-900 dark:text-white">Kenji Takahashi</h4>
+                <span class="text-[10px] text-gray-400">Institutional Tech Executive</span>
+              </div>
+            </div>
+            
+            <div class="space-y-2 text-xs">
+              <div class="p-2.5 rounded-xl bg-gray-50 dark:bg-vault border border-gray-150 dark:border-vault-border flex justify-between items-center text-[11px]">
+                <span class="text-gray-500">Acquisition:</span>
+                <span class="font-bold text-gray-800 dark:text-gray-200">2018 Topps Chrome Ohtani /25</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-gray-50 dark:bg-vault border border-gray-150 dark:border-vault-border flex justify-between items-center text-[11px]">
+                <span class="text-gray-500">Settlement:</span>
+                <span class="font-mono font-bold text-cherry-500">$4,850.00 Escrow Wire</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-gray-600 dark:text-gray-300 mt-4 leading-relaxed font-sans">
+              "Acquiring high-tier modern Japanese baseball grails from abroad used to be nerve-wracking due to counterfeit slabs and international transport hazards. CardVault provided a full 50x microscopic edge audit and held the card in their Beverly Hills bunker with zero sales tax. When I visited California, I inspected the slab in person in their private lounge. Simply unrivaled professionalism."
+            </p>
+          </div>
+
+          <div class="mt-6 pt-3 border-t border-gray-150 dark:border-vault-border flex items-center justify-between text-[11px] text-gray-400">
+            <span>Verified Vault Custody</span>
+            <span class="text-emerald-500 font-bold">✓ Insured by Lloyd's</span>
+          </div>
+        </div>
+
+        <!-- Case Study 2: Brandon Miller -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border flex flex-col justify-between hover:shadow-xl transition">
+          <div>
+            <div class="flex items-center gap-3 pb-4 mb-4 border-b border-gray-150 dark:border-vault-border">
+              <div class="w-12 h-12 rounded-xl overflow-hidden bg-vault border border-cherry-500/30 shrink-0">
+                <img src="../../.gemini/antigravity/brain/23f69f4a-ec0b-41a3-8b4b-ea9a9bffa028/.user_uploaded/media_1792300135482.jpg" alt="Brandon Miller" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <span class="text-[10px] font-black uppercase text-cherry-500">Basketball 🏀 • Chicago, IL</span>
+                <h4 class="font-bold text-sm text-gray-900 dark:text-white">Brandon Miller</h4>
+                <span class="text-[10px] text-gray-400">Private Equity Director</span>
+              </div>
+            </div>
+            
+            <div class="space-y-2 text-xs">
+              <div class="p-2.5 rounded-xl bg-gray-50 dark:bg-vault border border-gray-150 dark:border-vault-border flex justify-between items-center text-[11px]">
+                <span class="text-gray-500">Consignment:</span>
+                <span class="font-bold text-gray-800 dark:text-gray-200">1990s Jordan Fleer & Topps Slabs</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-gray-50 dark:bg-vault border border-gray-150 dark:border-vault-border flex justify-between items-center text-[11px]">
+                <span class="text-gray-500">Portfolio Value:</span>
+                <span class="font-mono font-bold text-cherry-500">$85,000.00 Depository Hold</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-gray-600 dark:text-gray-300 mt-4 leading-relaxed font-sans">
+              "After keeping my childhood collection in a bank safe deposit box with zero climate regulation, I watched two high-grade foil cards begin to show humidity clouding. Transferring my entire 1986 Fleer and 1990s Topps collection to CardVault's nitrogen chambers saved the cards from irreversible environmental decay. Their zero-commission private treaty sales model also fetched record comps."
+            </p>
+          </div>
+
+          <div class="mt-6 pt-3 border-t border-gray-150 dark:border-vault-border flex items-center justify-between text-[11px] text-gray-400">
+            <span>Class 3 Climate Chamber</span>
+            <span class="text-emerald-500 font-bold">✓ 4.5% Consignment</span>
+          </div>
+        </div>
+
+        <!-- Case Study 3: Liam Henderson -->
+        <div class="p-6 rounded-3xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border flex flex-col justify-between hover:shadow-xl transition">
+          <div>
+            <div class="flex items-center gap-3 pb-4 mb-4 border-b border-gray-150 dark:border-vault-border">
+              <div class="w-12 h-12 rounded-xl overflow-hidden bg-vault border border-cherry-500/30 shrink-0">
+                <img src="../../.gemini/antigravity/brain/23f69f4a-ec0b-41a3-8b4b-ea9a9bffa028/.user_uploaded/media_1792300135516.png" alt="Liam Henderson" class="w-full h-full object-cover">
+              </div>
+              <div>
+                <span class="text-[10px] font-black uppercase text-cherry-500">Cricket 🏏 • Sydney, Australia</span>
+                <h4 class="font-bold text-sm text-gray-900 dark:text-white">Liam Henderson</h4>
+                <span class="text-[10px] text-gray-400">Sports Heritage Curator</span>
+              </div>
+            </div>
+            
+            <div class="space-y-2 text-xs">
+              <div class="p-2.5 rounded-xl bg-gray-50 dark:bg-vault border border-gray-150 dark:border-vault-border flex justify-between items-center text-[11px]">
+                <span class="text-gray-500">Acquisition:</span>
+                <span class="font-bold text-gray-800 dark:text-gray-200">2024 Topps Cricket Kohli Red /5</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-gray-50 dark:bg-vault border border-gray-150 dark:border-vault-border flex justify-between items-center text-[11px]">
+                <span class="text-gray-500">Hammer Price:</span>
+                <span class="font-mono font-bold text-cherry-500">$3,200.00 Live Auction</span>
+              </div>
+            </div>
+
+            <p class="text-xs text-gray-600 dark:text-gray-300 mt-4 leading-relaxed font-sans">
+              "CardVault is the single only international depository that treats cricket trading cards with the exact same prestige, technological scrutiny, and market respect as American baseball or basketball. Winning the Virat Kohli Century Club Red Shimmer /5 through their live drop with instant armored transit tracking was the smoothest auction experience of my collecting career."
+            </p>
+          </div>
+
+          <div class="mt-6 pt-3 border-t border-gray-150 dark:border-vault-border flex items-center justify-between text-[11px] text-gray-400">
+            <span>Pop 1 Registry Record</span>
+            <span class="text-emerald-500 font-bold">✓ Armored Dispatch</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 9: VISIT PRIVATE LOUNGE ================= -->
+  <section class="py-16 lg:py-24 bg-white dark:bg-vault border-t border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-8 sm:p-12 rounded-3xl bg-cherry-900/10 border-2 border-cherry-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <span class="text-xs font-black uppercase tracking-widest text-cherry-500">By Appointment Only</span>
+          <h3 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white font-heading mt-1">Visit Our Private Beverly Hills Lounge</h3>
+          <p class="text-xs text-gray-600 dark:text-gray-300 mt-2 max-w-xl">Inspect 6-figure slabs under 50x magnification in our luxury viewing lounge. Book a confidential consultation with our directors.</p>
+        </div>
+        <a href="contact.html" class="bg-cherry-500 hover:bg-cherry-600 text-white font-black px-7 py-3.5 rounded-xl font-heading text-xs uppercase tracking-wider shrink-0 transition shadow-lg shadow-cherry-500/25">
+          Book Appointment
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 10: FOOTER ================= -->
+  <footer class="bg-gray-100 dark:bg-vault-deep text-gray-600 dark:text-gray-400 py-16 border-t border-gray-200 dark:border-vault-border text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <!-- Col 1: Brand & Overview -->
+        <div class="space-y-4">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+              </svg>
+            </div>
+            <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+          </a>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            The world's premier sports trading card marketplace and institutional vault facility. Powered by forensic authentication, certified grading, and real-time market comps.
+          </p>
+
+        </div>
+
+        <!-- Col 2: Sport Categories -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Sport Categories</h4>
+          <ul class="space-y-2.5">
+            <li><a href="category.html?type=baseball" class="hover:text-cherry-500 transition">Baseball (Topps Chrome)</a></li>
+            <li><a href="category.html?type=basketball" class="hover:text-cherry-500 transition">Basketball (Prizm &amp; Chrome)</a></li>
+            <li><a href="category.html?type=cricket" class="hover:text-cherry-500 transition">Cricket (Topps Attax &amp; Chrome)</a></li>
+            <li><a href="category.html?type=football" class="hover:text-cherry-500 transition">Football (Composite &amp; RPA)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Depository -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Services & Vault</h4>
+          <ul class="space-y-2.5">
+            <li><a href="grading.html" class="hover:text-cherry-500 transition">PSA Submission Pipeline</a></li>
+            <li><a href="home2.html" class="hover:text-cherry-500 transition">Class 3 Depository Storage</a></li>
+            <li><a href="about.html" class="hover:text-cherry-500 transition">Forensic Authentication Lab</a></li>
+            <li><a href="coming-soon.html" class="hover:text-cherry-500 transition">Next Drop Launchpad</a></li>
+            <li><a href="contact.html" class="hover:text-cherry-500 transition">Private Consignment Intake</a></li>
+            <li><a href="404.html" class="hover:text-cherry-500 transition">404 Error Diagnostics</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Collector Concierge -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Collector Concierge</h4>
+          <p class="text-xs text-gray-500 mb-2">9400 Wilshire Blvd, Suite 800<br>Beverly Hills, CA 90212</p>
+          <p class="text-xs font-mono text-cherry-500 font-bold mb-1"><a href="mailto:concierge@cardvault.com" class="hover:underline">concierge@cardvault.com</a></p>
+          <p class="text-xs text-gray-500"><a href="tel:+18005922273" class="hover:text-cherry-500 transition">+1 (800) 592-CARD</a></p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-gray-200 dark:border-vault-border text-center">
+        <p class="text-center mx-auto">&copy; 2026 CardVault Collectibles Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

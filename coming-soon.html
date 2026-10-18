@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon - Next Topps Chrome Drop & Vault 2.0 | CardVault</title>
+  <meta name="description" content="Prepare for the next CardVault ultra-rare sports cards drop. Countdown to Topps Chrome 1-of-1 Superfractors, Paul Skenes Bowman Grails, and Wembanyama Rookie Autos.">
+  <meta name="keywords" content="coming soon sports cards, Topps drop countdown, Paul Skenes 1/1 drop, Wembanyama auto release, CardVault drop calendar">
+
+  <!-- Immediate Theme & RTL Check -->
+  <script>
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    if (localStorage.getItem('site-dir') === 'rtl') {
+      document.documentElement.setAttribute('dir', 'rtl');
+    }
+  </script>
+
+  <!-- CardVault Logo Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Noto Sans (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cherry: {
+              50: '#fdf2f4',
+              100: '#fbe4e8',
+              200: '#f7c5cc', // Bubblegum Pink #F7C5CC
+              300: '#f199a6',
+              400: '#e56476',
+              500: '#cc313d', // Cherry Red #CC313D
+              600: '#b82430',
+              700: '#991b26',
+              800: '#801a23',
+              900: '#6c1b22',
+            },
+            bubblegum: {
+              light: '#fdf0f2',
+              DEFAULT: '#F7C5CC',
+              dark: '#f199a6',
+            },
+            vault: {
+              DEFAULT: '#0b0f19',
+              deep: '#060911',
+              card: '#111827',
+              light: '#1f2937',
+              border: '#2e384d'
+            }
+          },
+          fontFamily: {
+            heading: ['"Noto Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-vault-deep dark:text-gray-100 transition-colors duration-300 antialiased selection:bg-cherry-500 selection:text-white">
+
+  <!-- ================= SECTION 1: FIXED HEADER NAVIGATION ================= -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-vault/95 backdrop-blur-md border-b border-gray-200 dark:border-vault-border transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+            </svg>
+          </div>
+          <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 rtl:space-x-reverse mx-2 xl:mx-4">
+          <div class="relative group nav-dropdown">
+            <button class="dropdown-toggle flex items-center space-x-1.5 rtl:space-x-reverse text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 py-2 transition-colors">
+              <span>Home</span>
+              <svg class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="dropdown-menu absolute left-0 rtl:right-0 mt-1 w-64 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border shadow-2xl hidden group-hover:block z-50 p-2">
+              <a href="index.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-200 font-semibold text-sm transition">
+                <span class="w-8 h-8 rounded-lg bg-gray-200 dark:bg-vault flex items-center justify-center text-gray-500 font-bold text-xs shrink-0">⚡</span>
+                <span class="font-bold text-gray-900 dark:text-white">Sports Card Marketplace</span>
+              </a>
+              <a href="home2.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-200 font-semibold text-sm transition">
+                <span class="w-8 h-8 rounded-lg bg-gray-200 dark:bg-vault flex items-center justify-center text-gray-500 font-bold text-xs shrink-0">🏛️</span>
+                <span class="font-bold text-gray-900 dark:text-white">Vault Custody &amp; Consignment</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="about.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 transition">About Us</a>
+
+          <!-- Categories Mega Dropdown -->
+          <div class="relative group nav-dropdown">
+            <button class="dropdown-toggle flex items-center space-x-1.5 rtl:space-x-reverse text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 py-2 transition-colors">
+              <span>Categories</span>
+              <svg class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="dropdown-menu absolute left-1/2 -translate-x-1/2 rtl:translate-x-1/2 mt-1 w-[90vw] max-w-[680px] xl:w-[720px] rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border shadow-2xl hidden group-hover:block z-50 p-4 xl:p-5">
+              <div class="flex items-center justify-between pb-3 mb-4 border-b border-gray-100 dark:border-gray-800">
+                <h4 class="text-xs font-black uppercase tracking-wider text-cherry-500 font-heading">Explore By Sport Categories</h4>
+                <a href="category.html?type=baseball" class="text-xs font-bold text-gray-500 hover:text-cherry-500 transition">Explore All Graded Slabs →</a>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <a href="category.html?type=baseball" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="../../.gemini/antigravity/brain/23f69f4a-ec0b-41a3-8b4b-ea9a9bffa028/.user_uploaded/media_1792300313290.jpg" alt="Baseball" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Baseball ⚾</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Chrome, Bowman 1st, Ohtani</p><span class="text-[10px] font-bold text-cherry-500">6 Slabs Available</span></div>
+                </a>
+                <a href="category.html?type=basketball" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="../../.gemini/antigravity/brain/23f69f4a-ec0b-41a3-8b4b-ea9a9bffa028/.user_uploaded/media_1792300323187.jpg" alt="Basketball" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Basketball 🏀</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Chrome, Prizm, Wembanyama</p><span class="text-[10px] font-bold text-cherry-500">6 Slabs Available</span></div>
+                </a>
+                <a href="category.html?type=cricket" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="../../.gemini/antigravity/brain/23f69f4a-ec0b-41a3-8b4b-ea9a9bffa028/.user_uploaded/media_1792300384425.png" alt="Cricket" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Cricket 🏏</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Attax, Century Club, Kohli Auto</p><span class="text-[10px] font-bold text-cherry-500">6 Slabs Available</span></div>
+                </a>
+                <a href="category.html?type=football" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="../../.gemini/antigravity/brain/23f69f4a-ec0b-41a3-8b4b-ea9a9bffa028/.user_uploaded/media_1792300395776.png" alt="Football" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Football 🏈</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Composite, Contenders, Mahomes</p><span class="text-[10px] font-bold text-cherry-500">6 Slabs Available</span></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="grading.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 transition">Grading</a>
+          <a href="blog.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 transition">Blog</a>
+          <a href="contact.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 transition">Contact</a>
+        </nav>
+
+        <!-- Desktop Action Buttons -->
+        <div class="hidden lg:flex items-center space-x-2 xl:space-x-3 rtl:space-x-reverse shrink-0">
+          <button class="theme-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border hover:bg-gray-100 dark:hover:bg-vault-light text-gray-600 dark:text-gray-300 transition" aria-label="Toggle Theme">
+            <svg class="theme-toggle-sun w-5 h-5 hidden text-bubblegum" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path></svg>
+            <svg class="theme-toggle-moon w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+          <button class="rtl-toggle px-3 py-1.5 rounded-xl border border-gray-200 dark:border-vault-border text-xs font-black text-gray-700 dark:text-gray-300 transition">
+            <span class="rtl-text">← RTL</span>
+          </button>
+          <a href="category.html" class="bg-cherry-500 hover:bg-cherry-600 text-white font-black px-5 py-2.5 rounded-xl font-heading text-xs uppercase tracking-wider transition shadow-lg shadow-cherry-500/25">
+            Explore Slabs
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="lg:hidden flex items-center shrink-0">
+          <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300 focus:outline-none" aria-label="Open Mobile Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path class="line-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+              <path class="line-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+              <path class="line-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/70 lg:hidden">
+    <div class="mobile-menu-backdrop absolute inset-0"></div>
+    <div class="absolute top-0 right-0 rtl:left-0 rtl:right-auto w-[82vw] max-w-[320px] sm:w-88 h-full bg-white dark:bg-vault-card p-5 sm:p-6 shadow-2xl flex flex-col justify-between transition-transform duration-300 z-10 overflow-y-auto">
+      <div class="space-y-6">
+        <div class="flex justify-between items-center pb-4 border-b border-gray-200 dark:border-vault-border">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+              </svg>
+            </div>
+            <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+          </a>
+          <button id="mobile-menu-close" class="p-2 text-gray-500 hover:text-cherry-500 focus:outline-none" aria-label="Close Mobile Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <nav class="space-y-3">
+          <div class="space-y-1">
+            <button class="w-full flex justify-between items-center py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span>Home</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="pl-4 ml-1 space-y-2 hidden border-l-2 border-gray-200 dark:border-vault-border py-1 text-sm">
+              <a href="index.html" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500 font-semibold">Sports Card Marketplace</a>
+              <a href="home2.html" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500 font-semibold">Vault Custody &amp; Consignment</a>
+            </div>
+          </div>
+          <a href="about.html" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm">About Us</a>
+
+          <div class="space-y-1">
+            <button class="w-full flex justify-between items-center py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span>Categories</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="pl-4 ml-1 space-y-2 hidden border-l-2 border-gray-200 dark:border-vault-border py-1 text-sm">
+              <a href="category.html?type=baseball" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Baseball ⚾</a>
+              <a href="category.html?type=basketball" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Basketball 🏀</a>
+              <a href="category.html?type=cricket" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Cricket 🏏</a>
+              <a href="category.html?type=football" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Football 🏈</a>
+            </div>
+          </div>
+
+          <a href="grading.html" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm">Grading</a>
+          <a href="blog.html" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm">Blog</a>
+          <a href="contact.html" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm">Contact</a>
+        </nav>
+      </div>
+      <div class="space-y-4 pt-6">
+        <div class="space-y-2 pt-2 border-t border-gray-150 dark:border-vault-border">
+          <a href="wishlist.html" class="flex items-center justify-between py-2 text-cherry-500 font-bold text-sm">
+            <span>My Wishlist</span>
+            <span class="header-wishlist-count px-2 py-0.5 rounded-full bg-cherry-500 text-white text-xs">0</span>
+          </a>
+          <a href="cart.html" class="flex items-center justify-between py-2 text-cherry-500 font-bold text-sm">
+            <span>Cart</span>
+            <span class="header-cart-count px-2 py-0.5 rounded-full bg-cherry-500 text-white text-xs">0</span>
+          </a>
+        </div>
+        <div class="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-vault-border">
+          <button class="theme-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border hover:bg-gray-100 dark:hover:bg-vault-light text-gray-600 dark:text-gray-300 transition" title="Toggle Theme" aria-label="Toggle Dark/Light Mode">
+            <svg class="theme-toggle-sun w-5 h-5 hidden text-bubblegum" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+            </svg>
+            <svg class="theme-toggle-moon w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+          <button class="rtl-toggle p-2.5 rounded-xl border border-gray-200 dark:border-vault-border text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-vault-light transition text-xs font-bold" title="Toggle Text Direction" aria-label="Toggle RTL/LTR">
+            <span class="rtl-text">← RTL</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 2: HERO COUNTDOWN LAUNCHPAD ================= -->
+  <section class="relative py-20 lg:py-28 overflow-hidden bg-gradient-to-b from-cherry-500/15 via-transparent to-transparent border-b border-gray-200 dark:border-vault-border">
+    <!-- Ambient Holographic Glows -->
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-gradient-to-b from-cherry-500/20 to-transparent blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <!-- Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-black bg-cherry-500/10 text-cherry-600 dark:text-bubblegum border border-cherry-500/30 mb-6">
+        <span class="w-2 h-2 rounded-full bg-cherry-500 animate-pulse"></span>
+        <span>THE NATIONAL & TOPPS CHROME DROP // FALL 2026</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-gray-900 dark:text-white font-heading tracking-tight leading-none">
+        The Next <span class="text-transparent bg-clip-text bg-gradient-to-r from-cherry-500 via-bubblegum to-cherry-600">Vault Grail Drop</span> Is Almost Here
+      </h1>
+      
+      <p class="mt-6 text-sm sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        Featuring authenticated 1-of-1 Superfractors, Paul Skenes Bowman Chrome autos, Victor Wembanyama rookie patch autos, and Virat Kohli century rarities released directly from our Beverly Hills vaults.
+      </p>
+
+      <!-- LIVE COUNTDOWN TIMER (uses .countdown-timer from main.js) -->
+      <div class="mt-12 max-w-2xl mx-auto">
+        <div class="countdown-timer grid grid-cols-4 gap-2 sm:gap-6 p-3 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/80 dark:bg-vault-card/90 backdrop-blur-xl border-2 border-cherry-500/30 shadow-2xl">
+          
+          <!-- Days -->
+          <div class="flex flex-col items-center p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-gray-50 dark:bg-vault border border-gray-200 dark:border-vault-border">
+            <span class="cd-days text-xl sm:text-5xl lg:text-6xl font-black font-heading text-gray-900 dark:text-white leading-none">03</span>
+            <span class="text-[9px] sm:text-xs font-black uppercase tracking-wider text-cherry-500 mt-1 sm:mt-2">Days</span>
+          </div>
+
+          <!-- Hours -->
+          <div class="flex flex-col items-center p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-gray-50 dark:bg-vault border border-gray-200 dark:border-vault-border">
+            <span class="cd-hours text-xl sm:text-5xl lg:text-6xl font-black font-heading text-gray-900 dark:text-white leading-none">14</span>
+            <span class="text-[9px] sm:text-xs font-black uppercase tracking-wider text-cherry-500 mt-1 sm:mt-2">Hours</span>
+          </div>
+
+          <!-- Minutes -->
+          <div class="flex flex-col items-center p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-gray-50 dark:bg-vault border border-gray-200 dark:border-vault-border">
+            <span class="cd-minutes text-xl sm:text-5xl lg:text-6xl font-black font-heading text-gray-900 dark:text-white leading-none">42</span>
+            <span class="text-[9px] sm:text-xs font-black uppercase tracking-wider text-cherry-500 mt-1 sm:mt-2">Minutes</span>
+          </div>
+
+          <!-- Seconds -->
+          <div class="flex flex-col items-center p-2 sm:p-4 rounded-xl sm:rounded-2xl bg-gray-50 dark:bg-vault border border-gray-200 dark:border-vault-border">
+            <span class="cd-seconds text-xl sm:text-5xl lg:text-6xl font-black font-heading text-bubblegum dark:text-bubblegum leading-none">18</span>
+            <span class="text-[9px] sm:text-xs font-black uppercase tracking-wider text-cherry-500 mt-1 sm:mt-2">Seconds</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- VIP NOTIFICATION SIGNUP FORM -->
+      <div class="mt-10 max-w-xl mx-auto">
+        <form class="newsletter-form flex flex-col sm:flex-row gap-3 p-2 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border shadow-xl">
+          <input 
+            type="email" 
+            required 
+            placeholder="Enter your VIP collector email..." 
+            class="w-full px-5 py-3.5 bg-transparent text-xs sm:text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none rounded-xl"
+          >
+          <button type="submit" class="bg-cherry-500 hover:bg-cherry-600 text-white font-black px-8 py-3.5 rounded-xl font-heading text-xs uppercase tracking-wider shrink-0 transition shadow-lg shadow-cherry-500/25">
+            Get Drop Alert
+          </button>
+        </form>
+        <p class="text-[11px] text-gray-500 dark:text-gray-400 mt-3 flex items-center justify-center gap-2">
+          <span>🔒 2,490+ collectors in queue. 15-minute early access window before public drop.</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECTION 3: SNEAK PEEK GRAILS SHOWCASE ================= -->
+  <section class="py-16 lg:py-24 bg-white dark:bg-vault border-b border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs uppercase font-black tracking-widest text-cherry-500 font-heading">Vault Unvaulting Preview</span>
+          <h2 class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white font-heading mt-1">
+            Confirmed Slabs In Upcoming Drop
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-500 mt-2">Verified PSA 10 & BGS 9.5 specimens from official Topps collections.</p>
+        </div>
+        <a href="category.html" class="inline-flex items-center text-xs font-bold text-cherry-500 hover:text-cherry-600 transition">
+          <span>Explore Currently In-Stock Cards</span>
+          <span class="rtl:rotate-180 ml-1">→</span>
+        </a>
+      </div>
+
+      <!-- 4 Cards Grid (Baseball, Basketball, Cricket, Football) -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
+        
+        <!-- Card 1: Shohei Ohtani Baseball -->
+        <div class="group rounded-3xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border p-4 hover:border-cherry-500/50 transition duration-300 relative h-full flex flex-col justify-between">
+          <div class="absolute top-6 left-6 z-10 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-cherry-500 text-white tracking-wider">
+            1-of-1 Grail
+          </div>
+          <div>
+            <div class="rounded-2xl overflow-hidden bg-vault aspect-[3/4] relative holo-shimmer mb-4 border border-gray-200 dark:border-vault-border">
+              <img src="https://images.unsplash.com/photo-1508344928928-7165b67de128?auto=format&fit=crop&w=600&q=80" alt="Shohei Ohtani Topps Chrome" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/80 text-[10px] font-mono font-bold text-bubblegum">
+                PSA 10
+              </div>
+            </div>
+            <div class="text-[11px] font-bold text-cherry-500 uppercase tracking-wider">Baseball ⚾ • Topps Chrome</div>
+            <h3 class="text-sm font-black text-gray-900 dark:text-white font-heading mt-1 group-hover:text-cherry-500 transition min-h-[2.5rem] flex items-start">
+              Shohei Ohtani 2024 Superfractor #150
+            </h3>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-200 dark:border-vault-border flex justify-between items-center">
+            <div>
+              <span class="text-[10px] uppercase font-bold text-gray-400">Opening Bid</span>
+              <div class="text-base font-black text-gray-900 dark:text-white font-heading">$125,000</div>
+            </div>
+            <button onclick="showToast('Ohtani 1/1 added to drop alert watchlist!', '⚾')" class="px-3 py-1.5 rounded-lg bg-cherry-500/10 text-cherry-600 dark:text-bubblegum text-xs font-bold hover:bg-cherry-500 hover:text-white transition">
+              Notify Me
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2: Victor Wembanyama Basketball -->
+        <div class="group rounded-3xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border p-4 hover:border-cherry-500/50 transition duration-300 relative h-full flex flex-col justify-between">
+          <div class="absolute top-6 left-6 z-10 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-cherry-500 text-white tracking-wider">
+            Rookie Auto
+          </div>
+          <div>
+            <div class="rounded-2xl overflow-hidden bg-vault aspect-[3/4] relative holo-shimmer mb-4 border border-gray-200 dark:border-vault-border">
+              <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80" alt="Victor Wembanyama Topps Chrome" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/80 text-[10px] font-mono font-bold text-bubblegum">
+                BGS 9.5
+              </div>
+            </div>
+            <div class="text-[11px] font-bold text-cherry-500 uppercase tracking-wider">Basketball 🏀 • Topps Chrome</div>
+            <h3 class="text-sm font-black text-gray-900 dark:text-white font-heading mt-1 group-hover:text-cherry-500 transition min-h-[2.5rem] flex items-start">
+              Victor Wembanyama Refractor Auto /99
+            </h3>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-200 dark:border-vault-border flex justify-between items-center">
+            <div>
+              <span class="text-[10px] uppercase font-bold text-gray-400">Opening Bid</span>
+              <div class="text-base font-black text-gray-900 dark:text-white font-heading">$48,500</div>
+            </div>
+            <button onclick="showToast('Wembanyama Auto added to drop alert watchlist!', '🏀')" class="px-3 py-1.5 rounded-lg bg-cherry-500/10 text-cherry-600 dark:text-bubblegum text-xs font-bold hover:bg-cherry-500 hover:text-white transition">
+              Notify Me
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3: Virat Kohli Cricket -->
+        <div class="group rounded-3xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border p-4 hover:border-cherry-500/50 transition duration-300 relative h-full flex flex-col justify-between">
+          <div class="absolute top-6 left-6 z-10 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-cherry-500 text-white tracking-wider">
+            Century Shimmer /5
+          </div>
+          <div>
+            <div class="rounded-2xl overflow-hidden bg-vault aspect-[3/4] relative holo-shimmer mb-4 border border-gray-200 dark:border-vault-border">
+              <img src="https://images.unsplash.com/photo-1531415074868-036b1c57e329?auto=format&fit=crop&w=600&q=80" alt="Virat Kohli Topps Chrome" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/80 text-[10px] font-mono font-bold text-bubblegum">
+                PSA 10
+              </div>
+            </div>
+            <div class="text-[11px] font-bold text-cherry-500 uppercase tracking-wider">Cricket 🏏 • Topps Chrome</div>
+            <h3 class="text-sm font-black text-gray-900 dark:text-white font-heading mt-1 group-hover:text-cherry-500 transition min-h-[2.5rem] flex items-start">
+              Virat Kohli 2024 Century Club Red Auto
+            </h3>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-200 dark:border-vault-border flex justify-between items-center">
+            <div>
+              <span class="text-[10px] uppercase font-bold text-gray-400">Opening Bid</span>
+              <div class="text-base font-black text-gray-900 dark:text-white font-heading">$32,000</div>
+            </div>
+            <button onclick="showToast('Kohli Century Auto added to drop alert watchlist!', '🏏')" class="px-3 py-1.5 rounded-lg bg-cherry-500/10 text-cherry-600 dark:text-bubblegum text-xs font-bold hover:bg-cherry-500 hover:text-white transition">
+              Notify Me
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4: Caleb Williams Football -->
+        <div class="group rounded-3xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border p-4 hover:border-cherry-500/50 transition duration-300 relative h-full flex flex-col justify-between">
+          <div class="absolute top-6 left-6 z-10 px-2.5 py-1 rounded-full text-[10px] font-black uppercase bg-cherry-500 text-white tracking-wider">
+            Red Refractor /10
+          </div>
+          <div>
+            <div class="rounded-2xl overflow-hidden bg-vault aspect-[3/4] relative holo-shimmer mb-4 border border-gray-200 dark:border-vault-border">
+              <img src="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=600&q=80" alt="Caleb Williams Topps Composite" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/80 text-[10px] font-mono font-bold text-bubblegum">
+                PSA 10
+              </div>
+            </div>
+            <div class="text-[11px] font-bold text-cherry-500 uppercase tracking-wider">Football 🏈 • Topps Composite</div>
+            <h3 class="text-sm font-black text-gray-900 dark:text-white font-heading mt-1 group-hover:text-cherry-500 transition min-h-[2.5rem] flex items-start">
+              Caleb Williams 2024 Rookie Red Chrome
+            </h3>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-200 dark:border-vault-border flex justify-between items-center">
+            <div>
+              <span class="text-[10px] uppercase font-bold text-gray-400">Opening Bid</span>
+              <div class="text-base font-black text-gray-900 dark:text-white font-heading">$27,500</div>
+            </div>
+            <button onclick="showToast('Caleb Williams Red added to drop alert watchlist!', '🏈')" class="px-3 py-1.5 rounded-lg bg-cherry-500/10 text-cherry-600 dark:text-bubblegum text-xs font-bold hover:bg-cherry-500 hover:text-white transition">
+              Notify Me
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECTION 4: DROP RULES & COLLECTOR PERKS ================= -->
+  <section class="py-16 lg:py-24 bg-gray-50 dark:bg-vault-deep border-b border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase font-black tracking-widest text-cherry-500 font-heading">Exclusive Advantages</span>
+        <h2 class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white font-heading mt-1">
+          VIP Drop Day Guarantees
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-500 mt-2">Every drop follows strict anti-bot protocols, randomized queue positioning, and certified depository vault transfers.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-3xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border relative">
+          <div class="w-12 h-12 rounded-2xl bg-cherry-500/10 text-cherry-500 flex items-center justify-center text-xl mb-4">
+            🛡️
+          </div>
+          <h3 class="text-base font-black text-gray-900 dark:text-white font-heading">Zero Buyer's Premium</h3>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            Registered drop attendees pay 0% in auction fees on day one. Pay exactly what the hammer price dictates with no surprise markups.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border relative">
+          <div class="w-12 h-12 rounded-2xl bg-cherry-500/10 text-cherry-500 flex items-center justify-center text-xl mb-4">
+            🚚
+          </div>
+          <h3 class="text-base font-black text-gray-900 dark:text-white font-heading">Armored Transit or Free Vaulting</h3>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            Choose instant armored FedEx Priority Overnight shipping in a waterproof Pelican case, or keep in our Class 3 bunker tax-free.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border relative">
+          <div class="w-12 h-12 rounded-2xl bg-cherry-500/10 text-cherry-500 flex items-center justify-center text-xl mb-4">
+            🔍
+          </div>
+          <h3 class="text-base font-black text-gray-900 dark:text-white font-heading">Dual Forensics Review</h3>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            Every card includes high-res optical zoom scans, holographic cert validation, and ultrasonic weld integrity check before handover.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border relative">
+          <div class="w-12 h-12 rounded-2xl bg-cherry-500/10 text-cherry-500 flex items-center justify-center text-xl mb-4">
+            ⚡
+          </div>
+          <h3 class="text-base font-black text-gray-900 dark:text-white font-heading">Anti-Bot Fair Queue</h3>
+          <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            Cryptographically randomized queue numbers assigned 5 minutes prior to launch. Strict limit of one mega grail per verified passport/ID.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECTION 5: UPCOMING DROP SCHEDULE TIMELINE ================= -->
+  <section class="py-16 lg:py-24 bg-white dark:bg-vault border-b border-gray-200 dark:border-vault-border">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14">
+        <span class="text-xs uppercase font-black tracking-widest text-cherry-500 font-heading">Release Roadmap</span>
+        <h2 class="text-3xl font-black text-gray-900 dark:text-white font-heading mt-1">
+          Quarterly Depository Drop Schedule
+        </h2>
+      </div>
+
+      <div class="space-y-6">
+        
+        <!-- Timeline Item 1 -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 rounded-2xl bg-gray-50 dark:bg-vault-card border-2 border-cherry-500/40 gap-4">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-cherry-500 text-white flex flex-col items-center justify-center font-heading shrink-0">
+              <span class="text-xs font-bold leading-none">OCT</span>
+              <span class="text-lg font-black leading-tight">24</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-black uppercase text-cherry-500">Live Drop #41</span>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-cherry-500/15 text-cherry-600 dark:text-bubblegum">Current Countdown</span>
+              </div>
+              <h3 class="text-base font-black text-gray-900 dark:text-white font-heading">Topps Chrome & National Superfractors</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Shohei Ohtani 1/1, Paul Skenes 1st Bowman, Wembanyama Geometric</p>
+            </div>
+          </div>
+          <button onclick="showToast('Alert confirmed for Oct 24 Drop!', '🔔')" class="bg-cherry-500 hover:bg-cherry-600 text-white font-bold text-xs px-5 py-2.5 rounded-xl uppercase tracking-wider shrink-0 transition">
+            Set Reminder
+          </button>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border gap-4">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-gray-200 dark:bg-vault text-gray-800 dark:text-gray-200 flex flex-col items-center justify-center font-heading shrink-0">
+              <span class="text-xs font-bold leading-none">NOV</span>
+              <span class="text-lg font-black leading-tight">12</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-black uppercase text-gray-400">Live Drop #42</span>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-gray-200 dark:bg-vault text-gray-500">Upcoming</span>
+              </div>
+              <h3 class="text-base font-black text-gray-900 dark:text-white font-heading">Cricket Legends & Global Titans</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Topps Cricket Attax World Cup signed slabs, Sachin Tendulkar #10, Kohli Century Club</p>
+            </div>
+          </div>
+          <button onclick="showToast('Alert confirmed for Nov 12 Drop!', '🔔')" class="bg-gray-100 dark:bg-vault text-gray-700 dark:text-gray-300 hover:text-cherry-500 font-bold text-xs px-5 py-2.5 rounded-xl uppercase tracking-wider shrink-0 transition">
+            Set Reminder
+          </button>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border gap-4">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-gray-200 dark:bg-vault text-gray-800 dark:text-gray-200 flex flex-col items-center justify-center font-heading shrink-0">
+              <span class="text-xs font-bold leading-none">DEC</span>
+              <span class="text-lg font-black leading-tight">05</span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-black uppercase text-gray-400">Live Drop #43</span>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-gray-200 dark:bg-vault text-gray-500">Upcoming</span>
+              </div>
+              <h3 class="text-base font-black text-gray-900 dark:text-white font-heading">NFL Rookie Class Showcase</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Topps Composite Football, Caleb Williams Red /10, Jayden Daniels RPA /25</p>
+            </div>
+          </div>
+          <button onclick="showToast('Alert confirmed for Dec 05 Drop!', '🔔')" class="bg-gray-100 dark:bg-vault text-gray-700 dark:text-gray-300 hover:text-cherry-500 font-bold text-xs px-5 py-2.5 rounded-xl uppercase tracking-wider shrink-0 transition">
+            Set Reminder
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECTION 6: COMMUNITY & BREAKER CHANNELS ================= -->
+  <section class="py-14 bg-gray-50 dark:bg-vault-deep border-b border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-lg font-black text-gray-900 dark:text-white font-heading">
+        Join The 28,000+ Collector Community
+      </h3>
+      <p class="text-xs text-gray-500 mt-1 max-w-md mx-auto">Get instant alert pings on Discord and watch live box breaks on YouTube during every drop.</p>
+      
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs font-bold">
+        <a href="https://discord.com" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border hover:border-cherry-500 flex items-center gap-2 transition">
+          <span>💬</span>
+          <span>CardVault VIP Discord (14.2k)</span>
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border hover:border-cherry-500 flex items-center gap-2 transition">
+          <span>🐦</span>
+          <span>@CardVaultDrops on X</span>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border hover:border-cherry-500 flex items-center gap-2 transition">
+          <span>📺</span>
+          <span>Live Vault Breaks YouTube</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 7: FOOTER ================= -->
+  <footer class="bg-gray-100 dark:bg-vault-deep text-gray-600 dark:text-gray-400 py-16 border-t border-gray-200 dark:border-vault-border text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <!-- Col 1: Brand & Overview -->
+        <div class="space-y-4">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+              </svg>
+            </div>
+            <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+          </a>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            The world's premier sports trading card marketplace and institutional vault facility. Powered by forensic authentication, certified grading, and real-time market comps.
+          </p>
+
+        </div>
+
+        <!-- Col 2: Sport Categories -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Sport Categories</h4>
+          <ul class="space-y-2.5">
+            <li><a href="category.html?type=baseball" class="hover:text-cherry-500 transition">Baseball (Topps Chrome)</a></li>
+            <li><a href="category.html?type=basketball" class="hover:text-cherry-500 transition">Basketball (Prizm &amp; Chrome)</a></li>
+            <li><a href="category.html?type=cricket" class="hover:text-cherry-500 transition">Cricket (Topps Attax &amp; Chrome)</a></li>
+            <li><a href="category.html?type=football" class="hover:text-cherry-500 transition">Football (Composite &amp; RPA)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Depository -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Services & Vault</h4>
+          <ul class="space-y-2.5">
+            <li><a href="grading.html" class="hover:text-cherry-500 transition">PSA Submission Pipeline</a></li>
+            <li><a href="home2.html" class="hover:text-cherry-500 transition">Class 3 Depository Storage</a></li>
+            <li><a href="about.html" class="hover:text-cherry-500 transition">Forensic Authentication Lab</a></li>
+            <li><a href="coming-soon.html" class="hover:text-cherry-500 transition">Next Drop Launchpad</a></li>
+            <li><a href="contact.html" class="hover:text-cherry-500 transition">Private Consignment Intake</a></li>
+            <li><a href="404.html" class="hover:text-cherry-500 transition">404 Error Diagnostics</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Collector Concierge -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Collector Concierge</h4>
+          <p class="text-xs text-gray-500 mb-2">9400 Wilshire Blvd, Suite 800<br>Beverly Hills, CA 90212</p>
+          <p class="text-xs font-mono text-cherry-500 font-bold mb-1"><a href="mailto:concierge@cardvault.com" class="hover:underline">concierge@cardvault.com</a></p>
+          <p class="text-xs text-gray-500"><a href="tel:+18005922273" class="hover:text-cherry-500 transition">+1 (800) 592-CARD</a></p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-gray-200 dark:border-vault-border text-center">
+        <p class="text-center mx-auto">&copy; 2026 CardVault Collectibles Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

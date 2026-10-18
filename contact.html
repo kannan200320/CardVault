@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Private Appointments | CardVault Beverly Hills</title>
+  <meta name="description" content="Contact CardVault concierge. Schedule a private viewing in our Beverly Hills depository lounge, submit cards for consignment, or arrange wire transfer escrow.">
+  <meta name="keywords" content="contact CardVault, sports card vault location, card consignment Beverly Hills, private card broker, sports collectibles escrow">
+
+  <!-- Immediate Theme & RTL Check -->
+  <script>
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    if (localStorage.getItem('site-dir') === 'rtl') {
+      document.documentElement.setAttribute('dir', 'rtl');
+    }
+  </script>
+
+  <!-- CardVault Logo Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts: Noto Sans (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cherry: {
+              50: '#fdf2f4',
+              100: '#fbe4e8',
+              200: '#f7c5cc', // Bubblegum Pink #F7C5CC
+              300: '#f199a6',
+              400: '#e56476',
+              500: '#cc313d', // Cherry Red #CC313D
+              600: '#b82430',
+              700: '#991b26',
+              800: '#801a23',
+              900: '#6c1b22',
+            },
+            bubblegum: {
+              light: '#fdf0f2',
+              DEFAULT: '#F7C5CC',
+              dark: '#f199a6',
+            },
+            vault: {
+              DEFAULT: '#0b0f19',
+              deep: '#060911',
+              card: '#111827',
+              light: '#1f2937',
+              border: '#2e384d'
+            }
+          },
+          fontFamily: {
+            heading: ['"Noto Sans"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-vault-deep dark:text-gray-100 transition-colors duration-300 antialiased selection:bg-cherry-500 selection:text-white">
+
+  <!-- ================= SECTION 1: FIXED HEADER NAVIGATION ================= -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 dark:bg-vault/95 backdrop-blur-md border-b border-gray-200 dark:border-vault-border transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+            </svg>
+          </div>
+          <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 rtl:space-x-reverse mx-2 xl:mx-4">
+          <div class="relative group nav-dropdown">
+            <button class="dropdown-toggle flex items-center space-x-1.5 rtl:space-x-reverse text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 py-2 transition-colors">
+              <span>Home</span>
+              <svg class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="dropdown-menu absolute left-0 rtl:right-0 mt-1 w-64 rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border shadow-2xl hidden group-hover:block z-50 p-2">
+              <a href="index.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-200 font-semibold text-sm transition">
+                <span class="w-8 h-8 rounded-lg bg-gray-200 dark:bg-vault flex items-center justify-center text-gray-500 font-bold text-xs shrink-0">⚡</span>
+                <span class="font-bold text-gray-900 dark:text-white">Sports Card Marketplace</span>
+              </a>
+              <a href="home2.html" class="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-100 dark:hover:bg-vault-light text-gray-700 dark:text-gray-200 font-semibold text-sm transition">
+                <span class="w-8 h-8 rounded-lg bg-gray-200 dark:bg-vault flex items-center justify-center text-gray-500 font-bold text-xs shrink-0">🏛️</span>
+                <span class="font-bold text-gray-900 dark:text-white">Vault Custody &amp; Consignment</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="about.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 transition">About Us</a>
+
+          <!-- Categories Mega Dropdown -->
+          <div class="relative group nav-dropdown">
+            <button class="dropdown-toggle flex items-center space-x-1.5 rtl:space-x-reverse text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 py-2 transition-colors">
+              <span>Categories</span>
+              <svg class="w-4 h-4 text-gray-400 group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="dropdown-menu absolute left-1/2 -translate-x-1/2 rtl:translate-x-1/2 mt-1 w-[90vw] max-w-[680px] xl:w-[720px] rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border shadow-2xl hidden group-hover:block z-50 p-4 xl:p-5">
+              <div class="flex items-center justify-between pb-3 mb-4 border-b border-gray-100 dark:border-gray-800">
+                <h4 class="text-xs font-black uppercase tracking-wider text-cherry-500 font-heading">Explore By Sport Categories</h4>
+                <a href="category.html?type=baseball" class="text-xs font-bold text-gray-500 hover:text-cherry-500 transition">Explore All Graded Slabs →</a>
+              </div>
+              <div class="grid grid-cols-2 gap-4">
+                <a href="category.html?type=baseball" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="assets/images/hero-banner.jpg" alt="Baseball" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Baseball ⚾</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Chrome, Bowman 1st, Ohtani</p><span class="inline-block mt-1 text-[10px] font-bold text-cherry-500 bg-cherry-500/10 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">6 Slabs Available</span></div>
+                </a>
+                <a href="category.html?type=basketball" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="assets/images/victor-wembanyama-1.jpg" alt="Basketball" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Basketball 🏀</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Chrome, Prizm, Wembanyama</p><span class="inline-block mt-1 text-[10px] font-bold text-cherry-500 bg-cherry-500/10 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">6 Slabs Available</span></div>
+                </a>
+                <a href="category.html?type=cricket" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="assets/images/cricket-hub.jpg" alt="Cricket" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Cricket 🏏</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Attax, Century Club, Kohli Auto</p><span class="inline-block mt-1 text-[10px] font-bold text-cherry-500 bg-cherry-500/10 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">6 Slabs Available</span></div>
+                </a>
+                <a href="category.html?type=football" class="flex items-center gap-3.5 p-3 rounded-xl border border-gray-100 dark:border-vault-border bg-gray-50/50 dark:bg-vault hover:border-cherry-500/50 transition">
+                  <div class="w-16 h-16 rounded-lg overflow-hidden shrink-0"><img src="assets/images/football-hub.jpg" alt="Football" class="w-full h-full object-cover"></div>
+                  <div><div class="font-bold text-sm text-gray-900 dark:text-white">Football 🏈</div><p class="text-[11px] text-gray-500 line-clamp-1">Topps Composite, Contenders, Mahomes</p><span class="inline-block mt-1 text-[10px] font-bold text-cherry-500 bg-cherry-500/10 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">6 Slabs Available</span></div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a href="grading.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 transition">Grading</a>
+          <a href="blog.html" class="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-cherry-500 transition">Blog</a>
+          <a href="contact.html" class="text-sm font-bold text-cherry-500 transition">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center space-x-2 xl:space-x-3 rtl:space-x-reverse shrink-0">
+          <button class="theme-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border hover:bg-gray-100 dark:hover:bg-vault-light text-gray-600 dark:text-gray-300 transition" aria-label="Toggle Theme">
+            <svg class="theme-toggle-sun w-5 h-5 hidden text-bubblegum" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path></svg>
+            <svg class="theme-toggle-moon w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          </button>
+          <button class="rtl-toggle px-3 py-1.5 rounded-xl border border-gray-200 dark:border-vault-border text-xs font-black text-gray-700 dark:text-gray-300 transition">
+            <span class="rtl-text">← RTL</span>
+          </button>
+          <!-- Wishlist Button (Matches Image 5) -->
+          <a href="wishlist.html" class="relative p-2.5 rounded-2xl bg-gray-100 dark:bg-vault-card hover:bg-gray-200 dark:hover:bg-vault-light border border-gray-200/80 dark:border-vault-border text-gray-800 dark:text-gray-200 transition flex items-center justify-center group" title="My Vault Wishlist" aria-label="Wishlist">
+            <svg class="w-5 h-5 text-gray-800 dark:text-gray-200 group-hover:text-cherry-500 transition" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span class="header-wishlist-count absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-cherry-500 text-white text-[10px] font-black flex items-center justify-center shadow-md">0</span>
+          </a>
+
+          <!-- Cart Button (Matches Image 5) -->
+          <a href="cart.html" class="relative p-2.5 rounded-2xl bg-cherry-500 hover:bg-cherry-600 text-white transition flex items-center justify-center shadow-md shadow-cherry-500/25 group" title="Vault Escrow Cart" aria-label="Cart">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+            <span class="header-cart-count absolute -top-1.5 -right-1.5 min-w-[20px] h-5 px-1 rounded-full bg-white dark:bg-vault-card text-cherry-600 dark:text-cherry-400 border border-cherry-200 dark:border-vault-border text-[10px] font-black flex items-center justify-center shadow-md">0</span>
+          </a>
+        </div>
+
+        <div class="lg:hidden flex items-center gap-2 shrink-0">
+          <button id="mobile-menu-btn" class="p-2 text-gray-700 dark:text-gray-300 focus:outline-none rounded-lg hover:bg-gray-100 dark:hover:bg-vault-light transition" aria-label="Open Mobile Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path class="line-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+              <path class="line-2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+              <path class="line-3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/70 lg:hidden">
+    <div class="mobile-menu-backdrop absolute inset-0"></div>
+    <div class="absolute top-0 right-0 rtl:left-0 rtl:right-auto w-[82vw] max-w-[320px] sm:w-88 h-full bg-white dark:bg-vault-card p-5 sm:p-6 shadow-2xl flex flex-col justify-between transition-transform duration-300 z-10 overflow-y-auto">
+      <div class="space-y-6">
+        <div class="flex justify-between items-center pb-4 border-b border-gray-200 dark:border-vault-border">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+              </svg>
+            </div>
+            <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+          </a>
+          <button id="mobile-menu-close" class="p-2 text-gray-500 hover:text-cherry-500 focus:outline-none" aria-label="Close Mobile Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        <nav class="space-y-3">
+          <div class="space-y-1">
+            <button class="w-full flex justify-between items-center py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span>Home</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="pl-4 ml-1 space-y-2 hidden border-l-2 border-gray-200 dark:border-vault-border py-1 text-sm">
+              <a href="index.html" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500 font-semibold">Sports Card Marketplace</a>
+              <a href="home2.html" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500 font-semibold">Vault Custody &amp; Consignment</a>
+            </div>
+          </div>
+          <a href="about.html" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm">About Us</a>
+
+          <div class="space-y-1">
+            <button class="w-full flex justify-between items-center py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm transition" onclick="this.nextElementSibling.classList.toggle('hidden')">
+              <span>Categories</span>
+              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="pl-4 ml-1 space-y-2 hidden border-l-2 border-gray-200 dark:border-vault-border py-1 text-sm">
+              <a href="category.html?type=baseball" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Baseball ⚾</a>
+              <a href="category.html?type=basketball" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Basketball 🏀</a>
+              <a href="category.html?type=cricket" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Cricket 🏏</a>
+              <a href="category.html?type=football" class="block py-1 text-gray-600 dark:text-gray-400 hover:text-cherry-500">Football 🏈</a>
+            </div>
+          </div>
+
+          <a href="grading.html" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm">Grading</a>
+          <a href="blog.html" class="block py-2 text-gray-800 dark:text-gray-200 hover:text-cherry-500 font-bold text-sm">Blog</a>
+          <a href="contact.html" class="block py-2 text-cherry-500 font-bold text-sm">Contact</a>
+        </nav>
+      </div>
+      <div class="space-y-4 pt-6">
+        <div class="space-y-2 pt-2 border-t border-gray-150 dark:border-vault-border">
+          <a href="wishlist.html" class="flex items-center justify-between py-2 text-cherry-500 font-bold text-sm">
+            <span>My Wishlist</span>
+            <span class="header-wishlist-count px-2 py-0.5 rounded-full bg-cherry-500 text-white text-xs">0</span>
+          </a>
+          <a href="cart.html" class="flex items-center justify-between py-2 text-cherry-500 font-bold text-sm">
+            <span>Cart</span>
+            <span class="header-cart-count px-2 py-0.5 rounded-full bg-cherry-500 text-white text-xs">0</span>
+          </a>
+        </div>
+        <div class="flex justify-between items-center pt-4 border-t border-gray-200 dark:border-vault-border">
+          <button class="theme-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border hover:bg-gray-100 dark:hover:bg-vault-light text-gray-600 dark:text-gray-300 transition" title="Toggle Theme" aria-label="Toggle Dark/Light Mode">
+            <svg class="theme-toggle-sun w-5 h-5 hidden text-bubblegum" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"></path>
+            </svg>
+            <svg class="theme-toggle-moon w-5 h-5 text-gray-600 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+          <button class="rtl-toggle p-2 rounded-xl border border-gray-200 dark:border-vault-border text-xs font-bold"><span class="rtl-text">← RTL</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION 2: CONTACT HERO ================= -->
+  <section class="relative overflow-hidden py-14 lg:py-24 bg-gradient-to-b from-cherry-500/10 via-transparent to-transparent border-b border-gray-200 dark:border-vault-border">
+    <!-- Ambient glowing orbs -->
+    <div class="absolute -top-32 right-1/4 w-[500px] h-[500px] bg-cherry-500/10 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Copy & Details -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left rtl:lg:text-right">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-black bg-cherry-500/10 text-cherry-600 dark:text-cherry-400 border border-cherry-500/30">
+            <span>🏛️ Beverly Hills Depository • Suite 800</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white font-heading leading-tight">
+            Contact CardVault <span class="bg-gradient-to-r from-cherry-600 via-rose-500 to-cherry-600 dark:from-cherry-400 dark:via-rose-400 dark:to-cherry-300 bg-clip-text text-transparent">Concierge</span>
+          </h1>
+
+          <p class="text-base sm:text-lg font-medium text-gray-700 dark:text-gray-300 leading-relaxed font-sans max-w-2xl">
+            Whether you are consigning an eight-figure vintage grail, arranging an in-person forensic viewing at Suite 800 in Beverly Hills, or coordinating institutional bank wire escrow, our executive directors are at your personal service.
+          </p>
+
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-2">
+            <a href="#contact-form" class="bg-cherry-500 hover:bg-cherry-600 text-white px-7 py-3.5 rounded-xl font-bold font-heading text-xs uppercase tracking-wider transition shadow-lg shadow-cherry-500/25">
+              Send Confidential Inquiry
+            </a>
+            <a href="tel:+18005922273" class="bg-white dark:bg-vault-card border border-gray-300 dark:border-vault-border text-gray-900 dark:text-white px-7 py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider hover:border-cherry-500 transition flex items-center gap-2">
+              <span>📞 +1 (800) 592-CARD</span>
+            </a>
+          </div>
+
+          <!-- Quick Service Commitments -->
+          <div class="pt-6 border-t border-gray-200 dark:border-vault-border grid grid-cols-3 gap-4 text-center sm:text-left rtl:sm:text-right">
+            <div>
+              <div class="text-xl sm:text-2xl font-black text-cherry-600 dark:text-cherry-400 font-heading">&lt; 2 Hours</div>
+              <div class="text-xs text-gray-500 dark:text-gray-400 font-medium mt-0.5">Direct Email SLA</div>
+            </div>
+            <div>
+              <div class="text-xl sm:text-2xl font-black text-gray-900 dark:text-white font-heading">Suite 800</div>
+              <div class="text-xs text-gray-500 dark:text-gray-400 font-medium mt-0.5">Private Viewing Salon</div>
+            </div>
+            <div>
+              <div class="text-xl sm:text-2xl font-black text-cherry-600 dark:text-cherry-400 font-heading">100% Bonded</div>
+              <div class="text-xs text-gray-500 dark:text-gray-400 font-medium mt-0.5">Armored Escrow Intake</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Hero Showcase Image -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-lg rounded-3xl overflow-hidden border-2 border-cherry-500/30 shadow-2xl bg-vault group">
+            <div class="relative aspect-[16/10] sm:aspect-[4/3] overflow-hidden">
+              <img src="../../.gemini/antigravity/brain/23f69f4a-ec0b-41a3-8b4b-ea9a9bffa028/.user_uploaded/media_1792300135526.jpg" alt="CardVault Beverly Hills Depository Suite 800 Forensic Examination Bay and Private Salon" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+              
+              <!-- Image Overlay Tag -->
+              <div class="absolute bottom-4 left-4 right-4 text-white">
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span class="text-[10px] font-mono font-bold tracking-widest uppercase text-emerald-400">Beverly Hills Depository • Suite 800</span>
+                </div>
+                <h3 class="text-sm font-bold text-white font-heading">Forensic Examination Bay &amp; Client Consultation Salon</h3>
+                <p class="text-[11px] text-gray-300 mt-0.5">9400 Wilshire Blvd, Beverly Hills, CA 90212</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 3: FOUR CONTACT CHANNELS ================= -->
+  <section class="py-16 bg-white dark:bg-vault border-b border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase font-black tracking-widest text-cherry-500 font-heading">Direct Concierge Access</span>
+        <h2 class="text-3xl font-black text-gray-900 dark:text-white font-heading mt-2">
+          Specialized Intake & Advisory Channels
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2">
+          Connect directly with our senior archivists, grading liaisons, and private treaty brokerage directors.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-xs">
+        
+        <div class="p-6 rounded-3xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border flex flex-col justify-between h-full shadow-sm">
+          <div>
+            <div class="text-3xl mb-2">🏛️</div>
+            <h4 class="font-bold text-sm text-gray-900 dark:text-white font-heading min-h-[2.5rem] flex items-start">Flagship Depository & Lounge</h4>
+            <p class="text-gray-600 dark:text-gray-400 mt-2 leading-relaxed min-h-[2.5rem] flex items-start">
+              9400 Wilshire Blvd, Suite 800<br>Beverly Hills, CA 90212
+            </p>
+            <p class="text-[11px] text-gray-500 mt-2 min-h-[3rem] flex items-start">
+              Private physical intake for six-figure portfolios, in-person viewing of vaulted 1/1 grails, and notary closings.
+            </p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-200 dark:border-vault-border min-h-[2.25rem] flex items-center">
+            <span class="inline-block px-2.5 py-1 rounded-full bg-cherry-500/10 text-cherry-500 font-black text-[10px] uppercase">
+              By Prior Appointment Only
+            </span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border flex flex-col justify-between h-full shadow-sm">
+          <div>
+            <div class="text-3xl mb-2">📞</div>
+            <h4 class="font-bold text-sm text-gray-900 dark:text-white font-heading min-h-[2.5rem] flex items-start">Phone & Wire Escrow Desk</h4>
+            <p class="text-gray-600 dark:text-gray-400 mt-2 leading-relaxed min-h-[2.5rem] flex items-start">
+              Toll-Free: +1 (800) 592-CARD<br>Direct Wire Desk: Extension 4
+            </p>
+            <p class="text-[11px] text-gray-500 mt-2 min-h-[3rem] flex items-start">
+              Dedicated institutional bank wire verification, instant consignment advances, and auction bidding authorizations.
+            </p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-200 dark:border-vault-border min-h-[2.25rem] flex items-center">
+            <span class="inline-block px-2.5 py-1 rounded-full bg-gray-200 dark:bg-vault text-gray-700 dark:text-gray-300 font-bold text-[10px]">
+              Mon–Fri: 8:00 AM – 6:00 PM PST
+            </span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border flex flex-col justify-between h-full shadow-sm">
+          <div>
+            <div class="text-3xl mb-2">✉️</div>
+            <h4 class="font-bold text-sm text-gray-900 dark:text-white font-heading min-h-[2.5rem] flex items-start">Direct Executive Email</h4>
+            <p class="text-gray-600 dark:text-gray-400 mt-2 leading-relaxed min-h-[2.5rem] flex items-start">
+              concierge@cardvault.com<br>grading@cardvault.com
+            </p>
+            <p class="text-[11px] text-gray-500 mt-2 min-h-[3rem] flex items-start">
+              Send high-resolution card scans, collection spreadsheets, or PSA/BGS submission manifest numbers for review.
+            </p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-200 dark:border-vault-border min-h-[2.25rem] flex items-center">
+            <span class="inline-block px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-500 font-bold text-[10px]">
+              Guaranteed Sub-2 Hour SLA
+            </span>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border flex flex-col justify-between h-full shadow-sm">
+          <div>
+            <div class="text-3xl mb-2">💬</div>
+            <h4 class="font-bold text-sm text-gray-900 dark:text-white font-heading min-h-[2.5rem] flex items-start">VIP High-Roller Discord</h4>
+            <p class="text-gray-600 dark:text-gray-400 mt-2 leading-relaxed min-h-[2.5rem] flex items-start">
+              discord.gg/cardvault-vip<br>Private Verified Collector Tier
+            </p>
+            <p class="text-[11px] text-gray-500 mt-2 min-h-[3rem] flex items-start">
+              Encrypted channels for authenticated collectors with holdings exceeding $50,000. Real-time deal flow and comps.
+            </p>
+          </div>
+          <div class="mt-auto pt-3 border-t border-gray-200 dark:border-vault-border min-h-[2.25rem] flex items-center">
+            <span class="inline-block px-2.5 py-1 rounded-full bg-cherry-500/10 dark:bg-cherry-500/20 text-cherry-700 dark:text-cherry-300 border border-cherry-500/30 font-black text-[10px]">
+              24/7 Monitored Dispatch
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 4: INTERACTIVE CONTACT FORM ================= -->
+  <section id="contact-form" class="py-16 bg-gray-50 dark:bg-vault-deep">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-4 sm:p-8 lg:p-12 rounded-2xl sm:rounded-3xl bg-white dark:bg-vault-card border-2 border-cherry-500/25 shadow-2xl">
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <span class="text-xs font-black uppercase text-cherry-500 tracking-wider">Confidential Intake</span>
+          <h3 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white font-heading mt-1">
+            Send an Inquiry to Our Directors
+          </h3>
+          <p class="text-xs text-gray-500 mt-1">All communications are treated with strict nondisclosure discretion.</p>
+        </div>
+
+        <form onsubmit="event.preventDefault(); showToast('Inquiry submitted! Our directors will contact you shortly.', '✉️'); this.reset();" class="space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1">Your Name</label>
+              <input type="text" name="full_name" required minlength="2" placeholder="Elena Rostova" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 dark:border-vault-border bg-gray-50 dark:bg-vault text-xs focus:border-cherry-500 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
+              <input type="email" name="email_address" required placeholder="elena.collector@gmail.com" class="w-full px-4 py-2.5 rounded-xl border border-gray-300 dark:border-vault-border bg-gray-50 dark:bg-vault text-xs focus:border-cherry-500 focus:outline-none">
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1">Inquiry Purpose</label>
+              <select class="w-full px-4 py-2.5 rounded-xl border border-gray-300 dark:border-vault-border bg-gray-50 dark:bg-vault text-xs font-bold">
+                <option>Private Consignment Appraisal (Over $10K)</option>
+                <option>PSA / BGS Bulk Grading Submission</option>
+                <option>Beverly Hills Viewing Appointment</option>
+                <option>Wire Escrow Settlement Inquiry</option>
+                <option>Press & Media Relations</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1">Primary Sport Interest</label>
+              <select class="w-full px-4 py-2.5 rounded-xl border border-gray-300 dark:border-vault-border bg-gray-50 dark:bg-vault text-xs font-bold">
+                <option>Baseball ⚾ (Topps Chrome / Bowman)</option>
+                <option>Basketball 🏀 (Panini / Topps)</option>
+                <option>Cricket 🏏 (Topps Attax)</option>
+                <option>Football 🏈 (National Treasures)</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-gray-700 dark:text-gray-300 mb-1">Detailed Message or Inventory List</label>
+            <textarea rows="4" required placeholder="Describe your collection, specific card certificates, or preferred appointment dates..." class="w-full p-4 rounded-xl border border-gray-300 dark:border-vault-border bg-gray-50 dark:bg-vault text-xs"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-cherry-500 hover:bg-cherry-600 text-white font-black text-xs uppercase tracking-wider transition shadow-lg shadow-cherry-500/25">
+            Submit Confidential Inquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 4B: INTERACTIVE DEPOSITORY LOCATION MAP ================= -->
+  <section class="py-14 bg-white dark:bg-vault border-t border-gray-200 dark:border-vault-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <span class="text-xs uppercase font-black tracking-widest text-cherry-500 font-heading">Depository Headquarters</span>
+        <h3 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white font-heading mt-2">
+          CardVault Beverly Hills Depository
+        </h3>
+        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2">
+          Conveniently located on Wilshire Boulevard with secure on-site underground parking, private intake suites, and biometric depository access.
+        </p>
+      </div>
+
+      <!-- Map Container with Floating Info Card (Modeled after Google Maps reference) -->
+      <div class="relative rounded-3xl overflow-hidden border border-gray-200 dark:border-vault-border shadow-xl h-[420px] sm:h-[480px]">
+        <!-- Google Map Iframe -->
+        <iframe
+          title="CardVault Beverly Hills Map"
+          src="https://maps.google.com/maps?q=9400+Wilshire+Blvd,+Suite+800,+Beverly+Hills,+CA+90212&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          class="w-full h-full border-0 filter dark:contrast-125 dark:brightness-90"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+
+        <!-- Floating Location Information Card (Matches Image 5 layout) -->
+        <div class="absolute top-4 left-4 z-10 p-4 sm:p-5 rounded-2xl bg-white/95 dark:bg-vault-card/95 backdrop-blur-md shadow-2xl border border-gray-200/90 dark:border-vault-border max-w-[340px] pointer-events-auto transition hover:shadow-cherry-500/10">
+          <div class="flex items-start justify-between gap-2">
+            <div>
+              <h4 class="font-extrabold text-sm sm:text-base text-gray-900 dark:text-white leading-tight font-heading">
+                CardVault Flagship Depository
+              </h4>
+              <p class="text-xs text-gray-600 dark:text-gray-300 mt-1 leading-snug">
+                9400 Wilshire Blvd, Suite 800<br>Beverly Hills, CA 90212
+              </p>
+            </div>
+            <span class="text-xl">🏛️</span>
+          </div>
+
+          <div class="flex items-center gap-1.5 mt-2.5 text-xs">
+            <span class="font-black text-gray-900 dark:text-white">4.9</span>
+            <div class="flex text-amber-400 text-xs">
+              ★★★★★
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=9400+Wilshire+Blvd%2C+Suite+800%2C+Beverly+Hills%2C+CA+90212" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-bubblegum font-semibold hover:underline">
+              (184)
+            </a>
+            <span class="text-gray-400 text-[11px] cursor-help" title="Verified Depository Address">ⓘ</span>
+          </div>
+
+          <div class="flex items-center gap-2.5 mt-3.5 pt-3 border-t border-gray-100 dark:border-vault-border">
+            <a href="https://www.google.com/maps/search/?api=1&query=9400+Wilshire+Blvd%2C+Suite+800%2C+Beverly+Hills%2C+CA+90212" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-cherry-500 hover:bg-cherry-600 text-white font-bold text-xs shadow-md transition">
+              <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+              <span>Open in Maps</span>
+            </a>
+
+            <a href="https://www.google.com/maps/dir/?api=1&destination=9400+Wilshire+Blvd%2C+Suite+800%2C+Beverly+Hills%2C+CA+90212" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-100 dark:bg-vault hover:bg-rose-50 dark:hover:bg-vault-deep text-cherry-500 border border-gray-200 dark:border-vault-border transition shadow-sm" title="Get Directions">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 4C: FREQUENTLY ASKED QUESTIONS (5 FAQS) ================= -->
+  <section class="py-16 lg:py-20 bg-gray-50 dark:bg-vault-deep border-t border-gray-200 dark:border-vault-border">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-xs uppercase font-black tracking-widest text-cherry-500 font-heading">Depository Intelligence</span>
+        <h2 class="text-3xl font-black text-gray-900 dark:text-white font-heading mt-2">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-2">
+          Clear, definitive answers regarding private viewings, vault intake, authentication, and wire escrow settlements.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <!-- FAQ 1 -->
+        <div class="rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border overflow-hidden shadow-sm">
+          <button type="button" class="faq-toggle w-full p-5 text-left rtl:text-right flex justify-between items-center text-xs font-bold text-gray-900 dark:text-white hover:text-cherry-500 transition">
+            <span class="font-heading text-sm">1. How do I schedule a private viewing appointment at the Beverly Hills Depository?</span>
+            <span class="faq-icon text-cherry-500 text-lg transition-transform duration-300">↓</span>
+          </button>
+          <div class="p-5 pt-0 text-xs text-gray-600 dark:text-gray-300 border-t border-gray-150 dark:border-vault-border/50 leading-relaxed">
+            In-person viewings take place inside Suite 800 at 9400 Wilshire Boulevard, Beverly Hills. Appointments must be requested at least 24 hours in advance via our concierge intake form above or phone desk (+1 800 592-CARD). Qualified collectors are escorted into a biometric private viewing salon equipped with Leica stereomicroscopes and UV raking lights to personally inspect multi-thousand and million-dollar slabs under armed security supervision.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border overflow-hidden shadow-sm">
+          <button type="button" class="faq-toggle w-full p-5 text-left rtl:text-right flex justify-between items-center text-xs font-bold text-gray-900 dark:text-white hover:text-cherry-500 transition">
+            <span class="font-heading text-sm">2. How does CardVault guarantee card authenticity and condition?</span>
+            <span class="faq-icon text-cherry-500 text-lg transition-transform duration-300">↓</span>
+          </button>
+          <div class="p-5 pt-0 text-xs text-gray-600 dark:text-gray-300 border-t border-gray-150 dark:border-vault-border/50 leading-relaxed hidden">
+            Every slab transacted through CardVault undergoes acoustic sonic weld resonance testing to confirm the acrylic casing has never been breached, pried, or resealed. Furthermore, each certification number is verified in real-time against PSA, Beckett (BGS), and SGC central registries, backed by our unconditional 100% lifetime buyback authenticity guarantee underwritten by Lloyd's of London.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border overflow-hidden shadow-sm">
+          <button type="button" class="faq-toggle w-full p-5 text-left rtl:text-right flex justify-between items-center text-xs font-bold text-gray-900 dark:text-white hover:text-cherry-500 transition">
+            <span class="font-heading text-sm">3. What are the benefits of 0% sales tax in-vault digital custody?</span>
+            <span class="faq-icon text-cherry-500 text-lg transition-transform duration-300">↓</span>
+          </button>
+          <div class="p-5 pt-0 text-xs text-gray-600 dark:text-gray-300 border-t border-gray-150 dark:border-vault-border/50 leading-relaxed hidden">
+            When you purchase a slab and allocate it directly into CardVault depository custody, ownership title transfers digitally within our insured Beverly Hills facility without triggering state sales taxes. You avoid all shipping transit risks, save up to 10.25% in local sales taxes, and can re-list or liquidate the card peer-to-peer at any time with instant cash settlements.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border overflow-hidden shadow-sm">
+          <button type="button" class="faq-toggle w-full p-5 text-left rtl:text-right flex justify-between items-center text-xs font-bold text-gray-900 dark:text-white hover:text-cherry-500 transition">
+            <span class="font-heading text-sm">4. How are physical card shipments handled and insured?</span>
+            <span class="faq-icon text-cherry-500 text-lg transition-transform duration-300">↓</span>
+          </button>
+          <div class="p-5 pt-0 text-xs text-gray-600 dark:text-gray-400 border-t border-gray-150 dark:border-vault-border/50 leading-relaxed hidden">
+            All outbound physical dispatches travel via FedEx Priority Overnight with required adult ID signature verification. High-value slabs are packed in water-resistant, crush-tested Pelican™ armor cases with tamper-evident security tape, active cellular GPS tracking beacons, and comprehensive transit insurance up to $1,000,000 per parcel.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="rounded-2xl bg-white dark:bg-vault-card border border-gray-200 dark:border-vault-border overflow-hidden shadow-sm">
+          <button type="button" class="faq-toggle w-full p-5 text-left rtl:text-right flex justify-between items-center text-xs font-bold text-gray-900 dark:text-white hover:text-cherry-500 transition">
+            <span class="font-heading text-sm">5. What payment methods and wire escrow options are supported?</span>
+            <span class="faq-icon text-cherry-500 text-lg transition-transform duration-300">↓</span>
+          </button>
+          <div class="p-5 pt-0 text-xs text-gray-600 dark:text-gray-300 border-t border-gray-150 dark:border-vault-border/50 leading-relaxed hidden">
+            CardVault accepts institutional Fedwire bank transfers, ACH clearinghouse payments, major credit cards (via 256-bit SSL encrypted gateway), and approved stablecoin escrow (USDC). For transactions exceeding $10,000, our dedicated wire desk provides real-time bank coordinate verification and immediate release of title upon funds settlement.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 5: BEVERLY HILLS VIEWING LOUNGE ================= -->
+  <section class="py-16 lg:py-24 bg-white dark:bg-vault border-t border-gray-200 dark:border-vault-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-black bg-cherry-500/10 text-cherry-600 dark:text-bubblegum border border-cherry-500/20">
+            <span>🔍 Forensic Viewing Protocols</span>
+          </div>
+
+          <h3 class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white font-heading leading-tight">
+            Private Beverly Hills Viewing Suite & Lab
+          </h3>
+
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed font-sans">
+            High-value acquisitions deserve tangible, microscopic verification. Qualified collectors, institutional fund managers, and consignors may inspect six-figure and seven-figure grails within our biometric-secured executive lounge on Wilshire Boulevard.
+          </p>
+
+          <div class="space-y-3.5 text-xs">
+            <div class="p-4 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border space-y-1">
+              <strong class="font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                <span class="text-cherry-500 font-bold">✓</span> Leica 50x Stereomicroscope Workstations
+              </strong>
+              <p class="text-gray-500 dark:text-gray-400">
+                Inspect corner fiber retention, hologram micro-etching, and chromium surfaces under variable-angle raking light and UV spectrometers.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border space-y-1">
+              <strong class="font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                <span class="text-cherry-500 font-bold">✓</span> Armed Security Escort & Private Briefing Rooms
+              </strong>
+              <p class="text-gray-500 dark:text-gray-400">
+                Every viewing occurs behind soundproof, biometric doors with dedicated armed security personnel and non-disclosure privacy agreements.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-gray-50 dark:bg-vault-card border border-gray-200 dark:border-vault-border space-y-1">
+              <strong class="font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                <span class="text-cherry-500 font-bold">✓</span> In-Room Fiduciary Wire Escrow Settlement
+              </strong>
+              <p class="text-gray-500 dark:text-gray-400">
+                Complete transactions on the spot with direct Fedwire bank confirmations, immediate depository title assignment, and insured courier dispatch.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <button onclick="showToast('Viewing request logged! Concierge will call to verify credentials.', '📅')" class="bg-cherry-500 hover:bg-cherry-600 text-white font-black px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider transition shadow-lg shadow-cherry-500/25">
+              Request VIP Viewing Date
+            </button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 space-y-4">
+          <div class="rounded-3xl overflow-hidden border-2 border-cherry-500/30 shadow-2xl aspect-[16/10] bg-vault relative group">
+            <img src="assets/images/beverly-hills-suite-800-forensic-bay.png" alt="Beverly Hills Depository Suite 800 Forensic Examination Bay" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute bottom-3 left-3 right-3 bg-black/80 backdrop-blur-md rounded-2xl p-3 border border-white/10 text-white flex items-center justify-between text-xs">
+              <div>
+                <span class="text-[10px] font-mono text-bubblegum block">SUITE 800 FORENSIC BAY</span>
+                <span class="font-bold text-xs">Cleanroom ISO Class 5 Filtration</span>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-emerald-500/20 text-emerald-400 font-black text-[10px] border border-emerald-500/30">
+                ● Hologram Verified
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTION 7: FOOTER ================= -->
+  <footer class="bg-gray-100 dark:bg-vault-deep text-gray-600 dark:text-gray-400 py-16 border-t border-gray-200 dark:border-vault-border text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <!-- Col 1: Brand & Overview -->
+        <div class="space-y-4">
+          <a href="index.html" class="flex items-center space-x-2.5 rtl:space-x-reverse shrink-0 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cherry-500 to-cherry-700 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-cherry-500/30 group-hover:scale-105 transition transform">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2L2 7v6c0 5.55 3.84 10.74 10 12 6.16-1.26 10-6.45 10-12V7l-10-5zm0 4.5l6 3v4.5c0 3.7-2.5 7.1-6 8.2-3.5-1.1-6-4.5-6-8.2V9.5l6-3z"/>
+              </svg>
+            </div>
+            <span class="text-xl font-black tracking-tight text-gray-900 dark:text-white font-heading leading-tight">Card<span class="text-cherry-500">Vault</span></span>
+          </a>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            The world's premier sports trading card marketplace and institutional vault facility. Powered by forensic authentication, certified grading, and real-time market comps.
+          </p>
+        </div>
+
+        <!-- Col 2: Sport Categories -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Sport Categories</h4>
+          <ul class="space-y-2.5">
+            <li><a href="category.html?type=baseball" class="hover:text-cherry-500 transition">Baseball (Topps Chrome)</a></li>
+            <li><a href="category.html?type=basketball" class="hover:text-cherry-500 transition">Basketball (Prizm &amp; Chrome)</a></li>
+            <li><a href="category.html?type=cricket" class="hover:text-cherry-500 transition">Cricket (Topps Attax &amp; Chrome)</a></li>
+            <li><a href="category.html?type=football" class="hover:text-cherry-500 transition">Football (Composite &amp; RPA)</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services & Depository -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Services & Vault</h4>
+          <ul class="space-y-2.5">
+            <li><a href="grading.html" class="hover:text-cherry-500 transition">PSA Submission Pipeline</a></li>
+            <li><a href="home2.html" class="hover:text-cherry-500 transition">Class 3 Depository Storage</a></li>
+            <li><a href="about.html" class="hover:text-cherry-500 transition">Forensic Authentication Lab</a></li>
+            <li><a href="coming-soon.html" class="hover:text-cherry-500 transition">Next Drop Launchpad</a></li>
+            <li><a href="contact.html" class="hover:text-cherry-500 transition">Private Consignment Intake</a></li>
+            <li><a href="404.html" class="hover:text-cherry-500 transition">404 Error Diagnostics</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Collector Concierge -->
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-[11px] mb-4 font-heading">Collector Concierge</h4>
+          <p class="text-xs text-gray-500 mb-2">9400 Wilshire Blvd, Suite 800<br>Beverly Hills, CA 90212</p>
+          <p class="text-xs font-mono text-cherry-500 font-bold mb-1"><a href="mailto:concierge@cardvault.com" class="hover:underline">concierge@cardvault.com</a></p>
+          <p class="text-xs text-gray-500"><a href="tel:+18005922273" class="hover:text-cherry-500 transition">+1 (800) 592-CARD</a></p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-gray-200 dark:border-vault-border text-center">
+        <p class="text-center mx-auto">&copy; 2026 CardVault Collectibles Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
