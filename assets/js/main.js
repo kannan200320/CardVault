@@ -853,6 +853,7 @@ function initCardModal() {
   const backdrop = modal.querySelector('.modal-backdrop');
 
   const openCardModal = (data) => {
+    window.currentInspectedCard = data;
     modal.classList.remove('hidden');
     lockBodyScroll();
 
@@ -938,6 +939,34 @@ function initCardModal() {
 
   if (closeBtn) closeBtn.addEventListener('click', closeCardModal);
   if (backdrop) backdrop.addEventListener('click', closeCardModal);
+
+  // Modal Add to Cart / Secure Slab Function
+  window.addCurrentModalToCart = function() {
+    if (window.currentInspectedCard && window.addToCart) {
+      window.addToCart({
+        id: String(window.currentInspectedCard.id || 1),
+        name: window.currentInspectedCard.title || 'Graded Slab',
+        sport: window.currentInspectedCard.sport || 'Sports',
+        emoji: '🏆',
+        grade: window.currentInspectedCard.grade || 'PSA 10 Gem Mint',
+        serial: window.currentInspectedCard.serial || window.currentInspectedCard.cert || 'Certified Slab',
+        price: parseFloat(window.currentInspectedCard.price) || 450,
+        image: window.currentInspectedCard.img || 'assets/images/shohei-ohtani-17.jpg',
+        img: window.currentInspectedCard.img || 'assets/images/shohei-ohtani-17.jpg',
+        link: `card-details.html?id=${window.currentInspectedCard.id || 1}`
+      });
+      closeCardModal();
+    }
+  };
+
+  const modalAddBtn = modal.querySelector('button[onclick*="Added to Cart"], button[onclick*="Added slab"], button[onclick*="showToast(\'Added"]');
+  if (modalAddBtn) {
+    modalAddBtn.removeAttribute('onclick');
+    modalAddBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.addCurrentModalToCart();
+    });
+  }
 }
 
 // ==========================================
@@ -3353,19 +3382,91 @@ window.selectConsignmentTier = function(tierKey) {
   };
 
   window.addToCart = function(card) {
+    if (!card) return;
     let cart = getStoredCart();
     const existing = cart.find(item => String(item.id) === String(card.id));
+    const imagePath = card.image || card.img || 'assets/images/virat-kohli-18.jpg';
+    const priceNum = typeof card.price === 'number' ? card.price : parseFloat(String(card.price).replace(/[^0-9.]/g, '')) || 0;
+    const itemQty = card.qty ? parseInt(card.qty, 10) : 1;
+
     if (existing) {
-      existing.qty = (existing.qty || 1) + 1;
+      existing.qty = (existing.qty || 1) + itemQty;
+      if (!existing.image && imagePath) existing.image = imagePath;
+      if (!existing.img && imagePath) existing.img = imagePath;
     } else {
-      cart.push({ ...card, qty: 1 });
+      cart.push({
+        id: String(card.id),
+        name: card.name,
+        sport: card.sport || 'Sports',
+        emoji: card.emoji || '📦',
+        grade: card.grade || 'Factory Sealed Box',
+        serial: card.serial || card.desc || 'Archival Depository Allocation',
+        price: priceNum,
+        qty: itemQty,
+        image: imagePath,
+        img: imagePath,
+        link: card.link || (isNaN(Number(card.id)) ? 'category.html' : 'card-details.html?id=' + card.id)
+      });
     }
     localStorage.setItem('cardvault_cart', JSON.stringify(cart));
     window.updateHeaderBadges();
-    if (window.showToast) window.showToast(`Added ${card.name} to Cart`, '🛒');
+    if (window.showToast) {
+      const toastIcon = card.emoji || '📦';
+      window.showToast(`${card.name} added to cart!`, toastIcon);
+    }
     if (typeof window.renderCartPage === 'function') {
       window.renderCartPage();
     }
+  };
+
+  window.addBoxToCart = function(boxOrEl) {
+    if (!boxOrEl) return;
+    
+    // If a DOM element was passed (e.g. from onclick="window.addBoxToCart(this)")
+    if (boxOrEl instanceof Element || (typeof boxOrEl === 'object' && boxOrEl.nodeType === 1)) {
+      const container = boxOrEl.closest('.p-4') || boxOrEl.parentElement?.closest('.p-4') || boxOrEl.parentElement;
+      const title = container?.querySelector('h4')?.textContent?.trim() || 'Factory Sealed Hobby Box';
+      const img = container?.querySelector('img')?.getAttribute('src') || 'assets/images/box-topps-chrome-baseball-hobby.png';
+      const priceText = container?.querySelector('.font-black')?.textContent?.trim() || '$325.00';
+      const price = parseFloat(priceText.replace(/[^0-9.]/g, '')) || 325;
+      const desc = container?.querySelector('p')?.textContent?.trim() || 'Factory Sealed Wax Allocation';
+      const sportTag = container?.querySelector('.uppercase')?.textContent?.trim() || '';
+      
+      let sport = 'Sports';
+      let emoji = '📦';
+      if (/MLB|Baseball/i.test(sportTag) || /Baseball/i.test(title)) { sport = 'Baseball'; emoji = '⚾'; }
+      else if (/NBA|Basketball/i.test(sportTag) || /Basketball/i.test(title)) { sport = 'Basketball'; emoji = '🏀'; }
+      else if (/ICC|T20|Cricket/i.test(sportTag) || /Cricket/i.test(title)) { sport = 'Cricket'; emoji = '🏏'; }
+      else if (/NFL|NCAA|Football/i.test(sportTag) || /Football/i.test(title)) { sport = 'Football'; emoji = '🏈'; }
+
+      window.addToCart({
+        id: 'box-' + title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+        name: title,
+        price: price,
+        image: img,
+        img: img,
+        sport: sport,
+        emoji: emoji,
+        grade: 'Factory Sealed Box',
+        serial: desc,
+        link: 'category.html?type=' + sport.toLowerCase()
+      });
+      return;
+    }
+
+    // Direct object passed
+    window.addToCart({
+      id: boxOrEl.id || ('box-' + (boxOrEl.name || 'item').toLowerCase().replace(/[^a-z0-9]+/g, '-')),
+      name: boxOrEl.name,
+      price: typeof boxOrEl.price === 'number' ? boxOrEl.price : parseFloat(String(boxOrEl.price).replace(/[^0-9.]/g, '')) || 0,
+      image: boxOrEl.image || boxOrEl.img || 'assets/images/box-topps-chrome-baseball-hobby.png',
+      img: boxOrEl.image || boxOrEl.img || 'assets/images/box-topps-chrome-baseball-hobby.png',
+      sport: boxOrEl.sport || 'Sports',
+      emoji: boxOrEl.emoji || '📦',
+      grade: boxOrEl.grade || 'Factory Sealed Box',
+      serial: boxOrEl.desc || boxOrEl.serial || 'Factory Sealed Wax Allocation',
+      link: boxOrEl.link || ('category.html?type=' + (boxOrEl.sport ? boxOrEl.sport.toLowerCase() : 'baseball'))
+    });
   };
 
   window.removeFromCart = function(id) {
@@ -3471,6 +3572,24 @@ window.selectConsignmentTier = function(tierKey) {
   window.initWishlistAndCart = function() {
     window.updateHeaderBadges();
     window.syncCardWishlistButtons();
+
+    // Auto-bind any buttons with "Add Box", "Add Case", "Add Tin", "Add Pack"
+    document.querySelectorAll('button').forEach(btn => {
+      const txt = btn.textContent.trim();
+      if (/^Add (Box|Case|Tin|Pack)$/i.test(txt)) {
+        if (!btn.dataset.cartBound) {
+          btn.dataset.cartBound = 'true';
+          btn.addEventListener('click', function(e) {
+            const oc = btn.getAttribute('onclick') || '';
+            if (!oc.includes('addBoxToCart')) {
+              e.preventDefault();
+              e.stopImmediatePropagation();
+              window.addBoxToCart(btn);
+            }
+          }, true);
+        }
+      }
+    });
   };
 
   if (document.readyState === 'loading') {

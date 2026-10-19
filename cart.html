@@ -411,53 +411,69 @@
             
             <!-- Items Card List -->
             <div class="bg-white dark:bg-vault-card rounded-3xl border border-gray-200 dark:border-vault-border shadow-sm overflow-hidden">
-              <div class="p-5 border-b border-gray-100 dark:border-vault-border flex items-center justify-between">
-                <h3 class="font-extrabold text-base text-gray-900 dark:text-white font-heading">
-                  Reserved Slabs (${cart.length})
-                </h3>
-                <span class="text-xs text-gray-400">Archival Depository Allocation</span>
+              <div class="p-5 border-b border-gray-100 dark:border-vault-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <div class="flex items-center gap-2.5">
+                  <h3 class="font-extrabold text-base text-gray-900 dark:text-white font-heading">
+                    Reserved Slabs &amp; Allocations (${cart.length})
+                  </h3>
+                  <span class="text-[10px] font-black uppercase tracking-wider bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                    Vault Escrow
+                  </span>
+                </div>
+                <div class="hidden sm:flex items-center gap-6 text-[11px] font-black uppercase tracking-wider text-gray-400 dark:text-gray-500">
+                  <span class="w-24 text-center">Quantity</span>
+                  <span class="w-28 text-right">Subtotal</span>
+                </div>
               </div>
 
               <div class="divide-y divide-gray-100 dark:divide-vault-border">
                 ${cart.map(item => `
                   <div class="p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                    <div class="flex items-center gap-4">
-                      <a href="card-details.html?id=${item.id}" class="w-16 h-20 rounded-xl overflow-hidden bg-vault shrink-0 relative border border-gray-200 dark:border-vault-border">
-                        <img src="${item.image || 'assets/images/virat-kohli-18.jpg'}" alt="${item.name}" class="w-full h-full object-cover">
+                    <!-- Left: Item details -->
+                    <div class="flex items-center gap-4 min-w-0 flex-1">
+                      <a href="${item.link || (isNaN(Number(item.id)) ? 'category.html' : 'card-details.html?id=' + item.id)}" class="w-16 h-20 rounded-xl overflow-hidden bg-vault-deep shrink-0 relative border border-gray-200 dark:border-vault-border flex items-center justify-center group/img shadow-xs">
+                        <img src="${item.image || item.img || 'assets/images/box-topps-chrome-baseball-hobby.png'}" alt="${item.name}" class="w-full h-full object-cover group-hover/img:scale-105 transition duration-300">
                       </a>
-                      <div>
+                      <div class="min-w-0 flex-1">
                         <div class="flex items-center gap-2">
-                          <span class="text-[10px] font-black uppercase text-cherry-500">${item.sport || 'Sports'} ${item.emoji || '🏆'}</span>
-                          <span class="px-2 py-0.5 rounded text-[9px] font-black bg-gray-100 dark:bg-vault text-gray-700 dark:text-gray-300">${item.grade || 'PSA 10'}</span>
+                          <span class="text-[10px] font-black uppercase text-cherry-500 tracking-wider">${item.sport || 'Sports'} ${item.emoji || '🏆'}</span>
+                          <span class="px-2 py-0.5 rounded text-[9px] font-black bg-gray-100 dark:bg-vault text-gray-700 dark:text-gray-300">${item.grade || 'Factory Sealed Box'}</span>
                         </div>
-                        <h4 class="font-bold text-sm text-gray-900 dark:text-white mt-0.5 hover:text-cherry-500 transition">
-                          <a href="card-details.html?id=${item.id}">${item.name}</a>
+                        <h4 class="font-bold text-sm text-gray-900 dark:text-white mt-1 hover:text-cherry-500 transition line-clamp-1">
+                          <a href="${item.link || (isNaN(Number(item.id)) ? 'category.html' : 'card-details.html?id=' + item.id)}">${item.name}</a>
                         </h4>
-                        <p class="text-xs text-gray-500">${item.serial || 'Certified Slab'}</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 line-clamp-1">${item.serial || item.desc || 'Archival Depository Allocation'}</p>
                       </div>
                     </div>
 
-                    <div class="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-0 border-gray-100 dark:border-vault-border">
-                      <!-- Quantity Toggle -->
-                      <div class="flex items-center border border-gray-200 dark:border-vault-border rounded-xl overflow-hidden">
-                        <button onclick="window.updateCartQty('${item.id}', -1)" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:bg-gray-100 dark:hover:bg-vault transition font-bold text-sm">
-                          -
-                        </button>
-                        <span class="w-8 text-center text-xs font-bold text-gray-900 dark:text-white">
-                          ${item.qty || 1}
-                        </span>
-                        <button onclick="window.updateCartQty('${item.id}', 1)" class="w-8 h-8 flex items-center justify-center text-gray-500 hover:bg-gray-100 dark:hover:bg-vault transition font-bold text-sm">
-                          +
-                        </button>
+                    <!-- Right: Quantity Stepper & Price Column -->
+                    <div class="flex items-center justify-between sm:justify-end gap-6 w-full sm:w-auto pt-3 sm:pt-0 border-t sm:border-0 border-gray-100 dark:border-vault-border shrink-0">
+                      <!-- Quantity Stepper (Fixed w-24 aligned with header) -->
+                      <div class="w-24 flex items-center justify-center shrink-0">
+                        <div class="flex items-center border border-gray-200 dark:border-vault-border rounded-xl overflow-hidden bg-gray-50/70 dark:bg-vault shadow-xs">
+                          <button onclick="window.updateCartQty('${item.id}', -1)" class="w-7 h-8 flex items-center justify-center text-gray-500 hover:text-cherry-500 hover:bg-gray-200 dark:hover:bg-vault-light transition font-bold text-sm select-none" title="Decrease quantity" aria-label="Decrease quantity">
+                            -
+                          </button>
+                          <span class="w-8 text-center text-xs font-black text-gray-900 dark:text-white select-none">
+                            ${item.qty || 1}
+                          </span>
+                          <button onclick="window.updateCartQty('${item.id}', 1)" class="w-7 h-8 flex items-center justify-center text-gray-500 hover:text-cherry-500 hover:bg-gray-200 dark:hover:bg-vault-light transition font-bold text-sm select-none" title="Increase quantity" aria-label="Increase quantity">
+                            +
+                          </button>
+                        </div>
                       </div>
 
-                      <div class="text-right">
-                        <div class="font-black text-base text-gray-900 dark:text-white font-heading">
+                      <!-- Subtotal & Remove (Fixed w-28 aligned with header) -->
+                      <div class="w-28 text-right shrink-0 flex flex-col items-end justify-center">
+                        <div class="font-black text-base text-gray-900 dark:text-white font-heading leading-tight tabular-nums">
                           $${(Number(item.price || 0) * (item.qty || 1)).toLocaleString()}
                         </div>
-                        <button onclick="window.removeFromCart('${item.id}')" class="text-[11px] text-gray-400 hover:text-cherry-500 transition">
-                          Remove
-                        </button>
+                        <div class="flex items-center justify-end gap-1 mt-1">
+                          ${item.qty > 1 ? `<span class="text-[10px] text-gray-400 dark:text-gray-500 font-mono">($${Number(item.price || 0).toLocaleString()} ea)</span>` : ''}
+                          <button onclick="window.removeFromCart('${item.id}')" class="text-[11px] font-semibold text-gray-400 hover:text-cherry-500 hover:underline transition" title="Remove item from cart">
+                            Remove
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>

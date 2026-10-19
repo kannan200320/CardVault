@@ -1481,7 +1481,7 @@
             <div id="modal-card-price" class="text-2xl font-black text-gray-900 dark:text-white font-heading">$4,850.00</div>
           </div>
 
-          <button onclick="showToast('Added to Cart!', '🛒')" class="w-full py-3 rounded-xl bg-cherry-500 hover:bg-cherry-600 text-white font-black font-heading text-xs uppercase tracking-wider transition shadow-lg shadow-cherry-500/25">
+          <button onclick="window.addCurrentModalToCart ? window.addCurrentModalToCart() : null" class="w-full py-3 rounded-xl bg-cherry-500 hover:bg-cherry-600 text-white font-black font-heading text-xs uppercase tracking-wider transition shadow-lg shadow-cherry-500/25">
             Add Slab To Cart
           </button>
         </div>
