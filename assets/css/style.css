@@ -660,3 +660,34 @@ html:not(.dark) .hero-copy-desc {
   }
 }
 
+/* ========================================================= */
+/* Footer Social Media Buttons - Crisp & High-Contrast Style */
+/* ========================================================= */
+.footer-social-btn {
+  color: #111827 !important;
+}
+.footer-social-btn svg {
+  fill: currentColor !important;
+  color: #111827 !important;
+  width: 20px;
+  height: 20px;
+}
+.dark .footer-social-btn {
+  color: #ffffff !important;
+}
+.dark .footer-social-btn svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+.footer-social-btn:hover,
+.dark .footer-social-btn:hover {
+  background-color: #cc313d !important;
+  border-color: #cc313d !important;
+  color: #ffffff !important;
+}
+.footer-social-btn:hover svg,
+.dark .footer-social-btn:hover svg {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+

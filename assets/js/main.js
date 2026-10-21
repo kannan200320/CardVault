@@ -321,8 +321,8 @@ function highlightActiveNav() {
 
   const highlight = (el) => {
     if (!el) return;
-    el.classList.remove('text-gray-700', 'dark:text-gray-300', 'hover:text-[#CC313D]');
-    el.classList.add('text-[#CC313D]', 'dark:text-[#F7C5CC]', 'font-bold');
+    el.classList.remove('text-gray-700', 'dark:text-gray-300', 'text-gray-600', 'dark:text-gray-400', 'hover:text-[#CC313D]');
+    el.classList.add('text-cherry-500', 'dark:text-cherry-400', 'font-bold');
   };
 
   const navLinks = document.querySelectorAll('header nav a, #mobile-menu nav a');
@@ -2136,7 +2136,10 @@ function initCardDetailsPage() {
 
   if (sportPill) sportPill.textContent = card.sportCategory;
   if (posPill) posPill.textContent = card.pos;
-  if (titleEl) titleEl.textContent = card.title;
+  if (titleEl) {
+    titleEl.textContent = card.title;
+    titleEl.classList.add('whitespace-nowrap');
+  }
   if (setEl) setEl.textContent = card.set;
   if (certEl) certEl.textContent = card.cert;
   if (popEl) popEl.textContent = card.pop;
